@@ -11,12 +11,19 @@
     <DockPanel LastChildFill="False">
         <!-- 1: Profilbild, Name + Buttons -->
         <StackPanel Orientation="Horizontal" Height="150" DockPanel.Dock="Top">
-            <Image Height="100" Width="100" HorizontalAlignment="Center" ></Image>
-            <StackPanel>
-                
+
+            <StackPanel Width="200" Orientation="Horizontal">
+                <Image Height="100" Width="100" HorizontalAlignment="Center" ></Image>
             </StackPanel>
-            
+
+            <StackPanel  Width="400">
+                <TextBox x:Name="Mname" Height="100" FontSize="70" TextAlignment="Center" IsReadOnly="True" ></TextBox>
+                <!-- Stackpanel für Icons -->
+                <StackPanel Height="50" ></StackPanel>
+            </StackPanel >
+
         </StackPanel >
+        
         <!-- 2: Fächer, Termine -->
         <StackPanel DockPanel.Dock="Top" Height="200"></StackPanel>
         <!--3: Void  -->
