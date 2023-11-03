@@ -25,7 +25,16 @@
         </StackPanel >
         
         <!-- 2: Fächer, Termine -->
-        <StackPanel DockPanel.Dock="Top" Height="200"></StackPanel>
+        <StackPanel DockPanel.Dock="Top" Height="200" Orientation="Horizontal">
+            <StackPanel Width="400">
+                <ListBox x:Name="Faecher" Height="200" Width="300" ></ListBox>
+            </StackPanel>
+            <StackPanel Width="400">
+                <ListBox x:Name="Termine" Height="200" Width="350" ></ListBox>
+            </StackPanel>
+           
+            
+        </StackPanel>
         <!--3: Void  -->
         <StackPanel DockPanel.Dock="Top" Height="100"></StackPanel>
     </DockPanel>
