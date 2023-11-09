@@ -21,7 +21,7 @@ namespace MentoringLLC.Pages
     {
         public LogInPage()
         {
-            InitializeComponent();
+            
         }
     }
 }
