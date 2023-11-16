@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MentoringLLC.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MentoringLLC.Pages;
 
 namespace MentoringLLC
 {
@@ -23,6 +25,15 @@ namespace MentoringLLC
         public MainWindow()
         {
             InitializeComponent();
+            mainWindowframe.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
+            NavigateToLoginPage();
         }
+
+        private void NavigateToLoginPage()
+        {
+            mainWindowframe.Navigate(new Uri("Pages/LogInPage.xaml", UriKind.Relative));
+        }
+
+
     }
 }
