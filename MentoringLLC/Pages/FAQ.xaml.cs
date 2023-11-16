@@ -27,11 +27,18 @@ namespace MentoringLLC.Pages
 
         private void fill_lBox(List<string> Data)
         {
-            
+            foreach(string s in Data)
+            {
+                listbQuestions.Items.Add(s);
+            }
         }
         private void OpenQuestions(object sender, MouseButtonEventArgs e)
         {
-            
+            int index= listbQuestions.SelectedIndex;
+
+            //Hier Code schreiben der die Info aus der Datenbank ausliest
+
+            MessageBox.Show("Hier wird die Antwort ausgegeben");
         }
     }
 }
