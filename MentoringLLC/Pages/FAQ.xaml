@@ -11,6 +11,6 @@
     <DockPanel LastChildFill="False">
         <TextBox x:Name="Headline" Height="100" FontSize="70" TextAlignment="Center" IsReadOnly="True" DockPanel.Dock="Top" Width="400" >FAQ</TextBox>
 
-        <ListBox  x:Name="listbQuestions" DockPanel.Dock="Top" Width="600" Height="600" Margin="20"></ListBox>
+        <ListBox  x:Name="listbQuestions" DockPanel.Dock="Top" Width="600" Height="600" Margin="20" MouseDown="OpenQuestions"></ListBox>
     </DockPanel>
 </Page>

@@ -24,5 +24,14 @@ namespace MentoringLLC.Pages
         {
             InitializeComponent();
         }
+
+        private void fill_lBox(List<string> Data)
+        {
+            
+        }
+        private void OpenQuestions(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
     }
 }
