@@ -1,0 +1,19 @@
+﻿<Page x:Class="MentoringLLC.Interfaces.Sidebar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MentoringLLC.Interfaces"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="50"
+      Title="Sidebar">
+    <StackPanel Background="White">
+        <Image Margin="5,5,5,5" Height="50"></Image>
+        <Image Margin="5,5,5,5" Height="50" Source="/Pages/Sidebar_images/calender.png"></Image>
+        <Image Margin="5,5,5,5" Height="50" Source="/Pages/Sidebar_images/chat.png"></Image>
+        <Image Margin="5,5,5,5" Height="50" Source="/Pages/Sidebar_images/add.png"></Image>
+        <Image Margin="5,5,5,5" Height="50"></Image>
+        <Image Margin="5,45,5,5" Height="50" Source="/Pages/Sidebar_images/settings.png"></Image>
+        <Image Margin="5,5,5,5" Height="50" Source="/Pages/Sidebar_images/exit.png"></Image>
+    </StackPanel>
+</Page>
