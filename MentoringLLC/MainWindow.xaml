@@ -6,6 +6,10 @@
         xmlns:local="clr-namespace:MentoringLLC"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Frame Name="mainWindowframe">
-    </Frame>
+    <Grid>
+        <Frame Name="mainWindowframe">
+        </Frame>
+        <Image Margin="10" Width="100" Height="70" Source="/HTL-Logo.png" VerticalAlignment="Top"  HorizontalAlignment="Right"/>
+    </Grid>
+    
 </Window>

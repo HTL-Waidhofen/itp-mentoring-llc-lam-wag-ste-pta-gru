@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="HTL-Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="HTL-Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Pages\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

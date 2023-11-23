@@ -31,7 +31,7 @@ namespace MentoringLLC
 
         private void NavigateToLoginPage()
         {
-            mainWindowframe.Navigate(new Uri("Pages/LogInPage.xaml", UriKind.Relative));
+            mainWindowframe.Content = new Dashboard();
         }
 
 
