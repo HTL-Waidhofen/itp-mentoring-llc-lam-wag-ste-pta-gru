@@ -11,7 +11,8 @@
             <ColumnDefinition Width="0.5*" />
             <ColumnDefinition Width="1.5*" />
             <ColumnDefinition Width="3*" />
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="1.5*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -20,17 +21,14 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Column="2" FontSize="50" HorizontalAlignment="Center">Einstellungen</Label>
-        <Image Grid.Column="3" Source="\Images\HTL.png" Height="80" HorizontalAlignment="Right" VerticalAlignment="Top"></Image>
-        <ListBox Grid.Row="1" Grid.Column="1" Background="Gray" FontSize="29">
-            <ListBoxItem>Profil</ListBoxItem>
-            <ListBoxItem>Erscheinung</ListBoxItem>
-            <ListBoxItem>Sicherheit</ListBoxItem>
-            <ListBoxItem>Mentor</ListBoxItem>
+        <Image Grid.Column="4" Source="\Images\HTL.png" Height="80" HorizontalAlignment="Right" VerticalAlignment="Top"></Image>
+        <ListBox Grid.Row="1" Grid.Column="1" Background="Gray" FontSize="28" FontFamily="Arial">
+            <ListBoxItem MouseDown="ListBoxItem_MouseDown">Profil</ListBoxItem>
+            <ListBoxItem MouseDown="ListBoxItem_MouseDown_1">Erscheinung</ListBoxItem>
+            <ListBoxItem MouseDown="ListBoxItem_MouseDown_2">Sicherheit</ListBoxItem>
+            <ListBoxItem MouseDown="ListBoxItem_MouseDown_3">Mentor</ListBoxItem>
         </ListBox>
-        <ListBox Grid.Row="1" Grid.Column="2" Background="Gray" FontSize="29">
-            <ListBoxItem></ListBoxItem>
-            <ListBoxItem></ListBoxItem>
-            <ListBoxItem></ListBoxItem>
+        <ListBox Grid.Row="1" Grid.Column="2"  Grid.ColumnSpan="2" Background="Gray" FontSize="29">
             <ListBoxItem></ListBoxItem>
         </ListBox>
     </Grid>

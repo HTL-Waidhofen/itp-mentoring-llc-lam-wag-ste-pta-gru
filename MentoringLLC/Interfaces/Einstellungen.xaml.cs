@@ -23,5 +23,25 @@ namespace MentoringLLC.Interfaces
         {
             InitializeComponent();
         }
+
+        private void ListBoxItem_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void ListBoxItem_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void ListBoxItem_MouseDown_2(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void ListBoxItem_MouseDown_3(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
