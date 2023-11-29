@@ -23,6 +23,15 @@ namespace MentoringLLC
         public MainWindow()
         {
             InitializeComponent();
+       
+            NavigateToLoginPage();
         }
+
+        private void NavigateToLoginPage()
+        {
+            mainWindowframe.Content = new LogInPage();
+        }
+
+
     }
 }
