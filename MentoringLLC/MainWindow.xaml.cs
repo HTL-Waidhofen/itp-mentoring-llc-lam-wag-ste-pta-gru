@@ -31,7 +31,7 @@ namespace MentoringLLC
 
         private void NavigateToLoginPage()
         {
-            mainWindowframe.Content = new Dashboard();
+            mainWindowframe.Content = new FAQ();
         }
 
 

@@ -7,33 +7,16 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Dashboard">
-
-    <DockPanel LastChildFill="False">
-        <!-- 1: Name -->
-        <StackPanel Orientation="Horizontal" Height="150" DockPanel.Dock="Top">
-
-            <StackPanel Width="200" Orientation="Horizontal">
-                
-            </StackPanel>
-
-            <StackPanel  Width="400">
-                <TextBox x:Name="Mname" Height="100" FontSize="70" TextAlignment="Center" IsReadOnly="True" ></TextBox>
-            </StackPanel >
-
-        </StackPanel >
-
-        <!-- 2: Fächer, Mentoren -->
-        <StackPanel DockPanel.Dock="Top" Height="250" Orientation="Horizontal">
-            <StackPanel Width="400">
-                <ListBox x:Name="Faecher" Height="250" Width="300" ></ListBox>
-            </StackPanel>
-            <StackPanel Width="400">
-                <ListBox x:Name="Angebote" Height="250" Width="300" ></ListBox>
-            </StackPanel>
+    <Viewbox>
+        <Canvas Width="800" Height="450">
+            <!-- 1: Name -->
+            <TextBox Text="R" x:Name="Mname" Height="100" FontSize="70" TextAlignment="Center" IsReadOnly="True" Width="304" HorizontalAlignment="Left" Canvas.Left="248" VerticalAlignment="Center" ></TextBox>
 
 
-        </StackPanel>
-        <!--3: Void  -->
-        <StackPanel DockPanel.Dock="Top" Height="100"></StackPanel>
-    </DockPanel>
+            <!-- 2: Fächer, Mentoren -->
+            <ListBox x:Name="Faecher" Height="250" Width="300" Canvas.Top="149" ></ListBox>
+            <ListBox x:Name="Angebote" Height="250" Width="300" Canvas.Left="500" Canvas.Top="149" ></ListBox>
+        </Canvas>
+    </Viewbox>
+    
 </Page>

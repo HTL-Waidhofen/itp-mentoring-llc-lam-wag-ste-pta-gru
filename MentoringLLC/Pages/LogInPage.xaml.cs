@@ -17,7 +17,7 @@ namespace MentoringLLC.Pages
     /// <summary>
     /// Interaktionslogik für LogInPage.xaml
     /// </summary>
-    public partial class LogInPage : Window
+    public partial class LogInPage : Page
     {
         public LogInPage()
         {

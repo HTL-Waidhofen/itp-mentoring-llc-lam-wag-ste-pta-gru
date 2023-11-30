@@ -8,9 +8,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="FAQ">
 
-    <DockPanel LastChildFill="False">
-        <TextBox x:Name="Headline" Height="100" FontSize="70" TextAlignment="Center" IsReadOnly="True" DockPanel.Dock="Top" Width="400" >FAQ</TextBox>
+    <Viewbox>
 
-        <ListBox  x:Name="listbQuestions" DockPanel.Dock="Top" Width="600" Height="600" Margin="20" MouseDown="OpenQuestions"></ListBox>
-    </DockPanel>
+        <Canvas Width="800" Height="450">
+            <TextBox x:Name="Headline" Height="100" FontSize="70" TextAlignment="Center" IsReadOnly="True" Width="400" HorizontalAlignment="Left" Canvas.Left="200" VerticalAlignment="Center" >FAQ</TextBox>
+
+            <ListBox  x:Name="listbQuestions" DockPanel.Dock="Top" Width="600" Height="282" MouseDown="OpenQuestions" HorizontalAlignment="Left" Canvas.Left="100" Canvas.Top="168" VerticalAlignment="Top"/>
+        </Canvas>
+    </Viewbox>
 </Page>
