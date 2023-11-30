@@ -8,14 +8,14 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Dashboard">
     <Viewbox>
-        <Canvas Width="800" Height="450">
+        <Canvas MinWidth="800" MinHeight="450">
             <!-- 1: Name -->
-            <TextBox Text="R" x:Name="Mname" Height="100" FontSize="70" TextAlignment="Center" IsReadOnly="True" Width="304" HorizontalAlignment="Left" Canvas.Left="248" VerticalAlignment="Center" ></TextBox>
+            <TextBox Text="" x:Name="Mname" Height="100" Width="300" Canvas.Left="250" Canvas.Top="20" FontSize="70" TextAlignment="Center" IsReadOnly="True"   ></TextBox>
 
 
             <!-- 2: Fächer, Mentoren -->
-            <ListBox x:Name="Faecher" Height="250" Width="300" Canvas.Top="149" ></ListBox>
-            <ListBox x:Name="Angebote" Height="250" Width="300" Canvas.Left="500" Canvas.Top="149" ></ListBox>
+            <ListBox x:Name="Faecher" Height="250" Width="300"  Canvas.Left="20" Canvas.Top="150"></ListBox>
+            <ListBox x:Name="Angebote" Height="250" Width="300" Canvas.Left="480" Canvas.Top="150"  ></ListBox>
         </Canvas>
     </Viewbox>
     
