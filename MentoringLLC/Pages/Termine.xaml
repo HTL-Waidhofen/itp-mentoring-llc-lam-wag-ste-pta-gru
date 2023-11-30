@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MentoringLLC.Interfaces"
         mc:Ignorable="d"
-        Title="Termine" Height="450" Width="800">
-    <Canvas>
+      d:DesignHeight="450" d:DesignWidth="800"
+        Title="Termine" >
+    <Viewbox>
+        <Canvas Height="450" Width="800">
         <Grid Background="DimGray"  Height="450" Width="800">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -31,4 +33,5 @@
         <ListBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Background="Gray">Placeholder :)</ListBox>
     </Grid>
     </Canvas>
+    </Viewbox>
 </Page>
