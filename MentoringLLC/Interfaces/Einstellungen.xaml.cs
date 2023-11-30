@@ -17,7 +17,7 @@ namespace MentoringLLC.Interfaces
     /// <summary>
     /// Interaktionslogik für Einstellungen.xaml
     /// </summary>
-    public partial class Einstellungen : Window
+    public partial class Einstellungen : Page
     {
         public Einstellungen()
         {

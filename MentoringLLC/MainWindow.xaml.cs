@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MentoringLLC.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace MentoringLLC
         public MainWindow()
         {
             InitializeComponent();
+            MainWindowframe.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
+            NavigateToLoginPage();
+        }
+
+        private void NavigateToLoginPage()
+        {
+            MainWindowframe.Content = new Einstellungen();
         }
     }
 }
