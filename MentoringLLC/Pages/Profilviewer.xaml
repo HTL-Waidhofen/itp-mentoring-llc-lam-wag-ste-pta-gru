@@ -18,16 +18,11 @@
                     <StackPanel Height="50" Width="400" Canvas.Left="200" Canvas.Top="110" ></StackPanel>
 
             <!-- 2: Fächer, Termine -->
-            <StackPanel Visibility="Collapsed" DockPanel.Dock="Top" Height="200" Orientation="Horizontal">
-                <StackPanel Width="400">
-                    <ListBox x:Name="Faecher" Height="200" Width="300" ></ListBox>
-                </StackPanel>
-                <StackPanel Width="400">
-                    <ListBox x:Name="Termine" Height="200" Width="350" ></ListBox>
-                </StackPanel>
 
+            <ListBox x:Name="Faecher" Height="250" Width="300" Canvas.Left="20" Canvas.Top="160"></ListBox>
 
-            </StackPanel>
+            <ListBox x:Name="Termine" Height="250" Width="350" Canvas.Left="430" Canvas.Top="160"></ListBox>
+               
             
         </Canvas>
     </Viewbox>
