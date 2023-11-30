@@ -28,16 +28,9 @@ namespace WpfApp1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
+            if (openFileDialog.ShowDialog()==true)
             {
-                // Get the selected image file path
-                string imagePath = openFileDialog.FileName;
-
-                // Create a BitmapImage from the selected image file path
-                BitmapImage bitmapImage = new BitmapImage(new Uri(imagePath));
-
-                // Set the BitmapImage as the source of the Image control
-                image.Source = bitmapImage;
+                image.Source = new BitmapImage(new Uri(openFileDialog.FileName));
             }
         }
     }

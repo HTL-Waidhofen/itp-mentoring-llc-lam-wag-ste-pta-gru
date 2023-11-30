@@ -18,10 +18,11 @@
         <Image Name="image" HorizontalAlignment="Left" Height="100" Margin="97,193,0,0" VerticalAlignment="Top" Width="100"/>
         <Button  Content="Bild ändern" HorizontalAlignment="Left" Margin="95,312,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <TextBox HorizontalAlignment="Left" Margin="231,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="speichern" HorizontalAlignment="Left" Margin="682,312,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="speichern" HorizontalAlignment="Left" Margin="581,307,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <TextBox HorizontalAlignment="Left" Margin="400,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Passwort" HorizontalAlignment="Left" Margin="231,233,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.169,0.394"/>
         <Label Content="username" HorizontalAlignment="Left" Margin="400,233,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.169,0.394"/>
+        <Button Content="bannen" HorizontalAlignment="Left" Margin="581,275,0,0" VerticalAlignment="Top" Click="Button_Click" Width="55"/>
 
     </Grid>
 </Window>
