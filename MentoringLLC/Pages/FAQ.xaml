@@ -10,10 +10,10 @@
 
     <Viewbox>
 
-        <Canvas Width="800" Height="450">
-            <TextBox x:Name="Headline" Height="100" FontSize="70" TextAlignment="Center" IsReadOnly="True" Width="400" HorizontalAlignment="Left" Canvas.Left="200" VerticalAlignment="Center" >FAQ</TextBox>
+        <Canvas MinWidth="800" MinHeight="450">
+            <TextBox x:Name="Headline" Height="100" Canvas.Left="200" Canvas.Top="10" FontSize="70" TextAlignment="Center" IsReadOnly="True" Width="400" >FAQ</TextBox>
 
-            <ListBox  x:Name="listbQuestions" DockPanel.Dock="Top" Width="600" Height="282" MouseDown="OpenQuestions" HorizontalAlignment="Left" Canvas.Left="100" Canvas.Top="168" VerticalAlignment="Top"/>
+            <ListBox  x:Name="listbQuestions" Width="600" Height="280" Canvas.Left="100" Canvas.Top="150" MouseDown="OpenQuestions"  />
         </Canvas>
     </Viewbox>
 </Page>
