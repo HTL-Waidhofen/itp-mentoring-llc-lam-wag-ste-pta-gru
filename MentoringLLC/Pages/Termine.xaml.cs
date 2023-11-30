@@ -12,12 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MentoringLLC.Interfaces
+namespace MentoringLLC.Interfaces 
 {
     /// <summary>
     /// Interaktionslogik für Termine.xaml
     /// </summary>
-    public partial class Termine : Window
+    public partial class Termine : Page
     {
         public Termine()
         {
