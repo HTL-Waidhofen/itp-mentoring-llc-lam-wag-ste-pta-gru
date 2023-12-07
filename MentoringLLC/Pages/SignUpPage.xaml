@@ -1,0 +1,57 @@
+﻿<Page x:Class="MentoringLLC.Pages.SignUpPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MentoringLLC.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="850"
+      Title="SignUpPage">
+
+    <StackPanel>
+        <Grid>
+            <MediaElement x:Name="myMediaElement" Source="Resources/WPFMentor.mp4" IsMuted="True">
+                <MediaElement.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+
+                                <!-- The MediaTimeline has a RepeatBehavior="Forever" which makes the media play
+          over and over indefinitely.-->
+                                <MediaTimeline Name="Background" 
+      RepeatBehavior="Forever" />
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </MediaElement.Triggers>
+
+            </MediaElement>
+            <StackPanel>
+                <Label Height="85"></Label>
+              <TextBox Name="UsernameBox" Height="20" Width="112" Text="Username" GotFocus="Username" Canvas.Left="344" Canvas.Top="83"/>
+              <Label Height="45"></Label>
+              <TextBox Name="EmailBox" Height="20" Width="112" Text="E-Mail" GotFocus="EMail" Canvas.Left="344" Canvas.Top="83"/>
+              <Label Height="45"></Label>
+              
+              
+
+              <TextBox x:Name="PasswordTextBox" Text="Password" GotFocus="Password" Height="20" Width="112" Canvas.Left="344" Canvas.Top="225"/>
+              <PasswordBox x:Name="HiddenPasswordBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="344" Canvas.Top="225"/>
+              
+                <Label Height="45"></Label>
+              
+              <TextBox x:Name="PasswordConfirmTextBox" Text="Confirm Password" GotFocus="PasswordConfirm" Height="20" Width="112" Canvas.Left="344" Canvas.Top="225"/>
+              <PasswordBox x:Name="HiddenPasswordConfirmBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="344" Canvas.Top="225"/>
+              <Label Height="45"></Label>
+              
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                  
+                    <Button Height="25" Width="120" FontSize="15">Sign-Up</Button>
+
+        </StackPanel>
+            </StackPanel>
+        </Grid>
+
+    </StackPanel>
+</Page>

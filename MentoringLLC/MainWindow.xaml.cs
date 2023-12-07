@@ -14,7 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MentoringLLC;
+using MentoringLLC.Pages;
+
 namespace MentoringLLC
 {
     /// <summary>
@@ -23,9 +24,12 @@ namespace MentoringLLC
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow instance; 
+        
         public MainWindow()
         {
-            InitializeComponent();
+            NavigateToLoginPage();
+            instance = this;
             mainWindowFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
             NavigateToLoginPage();
         }
