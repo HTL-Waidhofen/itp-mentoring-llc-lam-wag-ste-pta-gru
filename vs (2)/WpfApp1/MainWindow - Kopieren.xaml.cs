@@ -1,6 +1,4 @@
-using MentoringLLC.Interfaces;
-using MentoringLLC.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MentoringLLC
+namespace WpfApp1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,14 +23,16 @@ namespace MentoringLLC
         public MainWindow()
         {
             InitializeComponent();
-            mainWindowFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
-            NavigateToLoginPage();
         }
 
-        private void NavigateToLoginPage()
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            mainWindowFrame.Content = new FAQ();
-            sideBarFrame.Content = new Sidebar();
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

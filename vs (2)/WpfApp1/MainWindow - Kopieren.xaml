@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="admin panel" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <!-- Adjust this as needed -->
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- Adjusts based on content -->
+            <RowDefinition Height="*" />
+            <!-- Takes up remaining space -->
+            <RowDefinition Height="50" />
+            <!-- Fixed-size row of 50 units -->
+        </Grid.RowDefinitions>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="63,0,0,0" VerticalAlignment="Center" Height="26" Width="50" Click="Button_Click" Grid.Row="1"/>
+        <Button Content="Button" Height="26" Width="50" Click="Button_Click" Margin="588,179,137,179" Grid.Row="1"/>
+        <Button Content="Button" Height="26" Width="50" Click="Button_Click" Margin="162,166,563,166" Grid.Row="1" />
+        <Label Content="leute liste" HorizontalAlignment="Left" Margin="27,-59,0,0" VerticalAlignment="Top" Width="142"/>
+        <ListBox Grid.Row="2" Height="172" d:ItemsSource="{d:SampleData ItemCount=5}" Width="325" Margin="-400,-175,0,0"/>
+        <ListBox Grid.Row="2" Height="172" d:ItemsSource="{d:SampleData ItemCount=5}" Width="325" Margin="450,-175,0,0"/>
+        <Button Content="Button" Height="26" Width="50" Click="Button_Click" Margin="259,166,466,166" Grid.Row="1" />
+        <Button Content="Button" Height="26" Width="50" Click="Button_Click" Margin="694,179,31,179" Grid.Row="1"/>
+        <Button Content="Button" Height="26" Width="50" Click="Button_Click" Margin="486,179,239,179" Grid.Row="1"/>
+
+    </Grid>
+</Window>

@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MentoringLLC"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        SizeToContent="WidthAndHeight"
+        Title="MainWindow" Height="450" Width="850"  MinHeight="450" MinWidth="850" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    
     <Grid>
-        <Frame Name="MainWindowframe"></Frame>
+        <Frame Name="sideBarFrame" HorizontalAlignment="Left"/>
+        <Frame Name="mainWindowFrame" Margin="50,0,0,0"/>
+        <Image Margin="10" Width="100" Height="70" Source="/HTL-Logo.png" VerticalAlignment="Top"  HorizontalAlignment="Right"/>
     </Grid>
+   
 </Window>

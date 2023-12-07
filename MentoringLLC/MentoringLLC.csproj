@@ -7,4 +7,51 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="HTL-Logo.png" />
+    <None Remove="Pages\Sidebar_images\add.png" />
+    <None Remove="Pages\Sidebar_images\calender.png" />
+    <None Remove="Pages\Sidebar_images\chat.png" />
+    <None Remove="Pages\Sidebar_images\exit.png" />
+    <None Remove="Pages\Sidebar_images\question.png" />
+    <None Remove="Pages\Sidebar_images\settings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="HTL-Logo.png" />
+    <Resource Include="Pages\Sidebar_images\add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pages\Sidebar_images\calender.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pages\Sidebar_images\chat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pages\Sidebar_images\exit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pages\Sidebar_images\question.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pages\Sidebar_images\settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>
