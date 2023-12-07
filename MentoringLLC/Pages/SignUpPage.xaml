@@ -8,9 +8,9 @@
       d:DesignHeight="450" d:DesignWidth="850"
       Title="SignUpPage">
 
-    <StackPanel>
-        <Grid>
-            <MediaElement x:Name="myMediaElement" Source="Resources/WPFMentor.mp4" IsMuted="True">
+    <Viewbox>
+        <Canvas Height="450" Width="850">
+            <MediaElement x:Name="myMediaElement" Source="Resources/WPFMentor.mp4" IsMuted="True" Height="450" Width="850">
                 <MediaElement.Triggers>
                     <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                         <BeginStoryboard>
@@ -27,31 +27,30 @@
                 </MediaElement.Triggers>
 
             </MediaElement>
-            <StackPanel>
-                <Label Height="85"></Label>
-              <TextBox Name="UsernameBox" Height="20" Width="112" Text="Username" GotFocus="Username" Canvas.Left="344" Canvas.Top="83"/>
-              <Label Height="45"></Label>
-              <TextBox Name="EmailBox" Height="20" Width="112" Text="E-Mail" GotFocus="EMail" Canvas.Left="344" Canvas.Top="83"/>
-              <Label Height="45"></Label>
-              
-              
 
-              <TextBox x:Name="PasswordTextBox" Text="Password" GotFocus="Password" Height="20" Width="112" Canvas.Left="344" Canvas.Top="225"/>
-              <PasswordBox x:Name="HiddenPasswordBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="344" Canvas.Top="225"/>
-              
-                <Label Height="45"></Label>
-              
-              <TextBox x:Name="PasswordConfirmTextBox" Text="Confirm Password" GotFocus="PasswordConfirm" Height="20" Width="112" Canvas.Left="344" Canvas.Top="225"/>
-              <PasswordBox x:Name="HiddenPasswordConfirmBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="344" Canvas.Top="225"/>
-              <Label Height="45"></Label>
-              
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                  
-                    <Button Height="25" Width="120" FontSize="15">Sign-Up</Button>
+            <Label Height="85"></Label>
+            <TextBox Name="UsernameBox" Height="20" Width="112" Text="Username" GotFocus="Username" Canvas.Left="369" Canvas.Top="42"/>
+            <Label Height="45"></Label>
+            <TextBox Name="EmailBox" Height="20" Width="180" Text="E-Mail" GotFocus="EMail" Canvas.Left="335" Canvas.Top="105" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Height="45"></Label>
 
-        </StackPanel>
-            </StackPanel>
-        </Grid>
 
-    </StackPanel>
+
+            <TextBox x:Name="PasswordTextBox" Text="Password" GotFocus="Password" Height="20" Width="112" Canvas.Left="369" Canvas.Top="178"/>
+            <PasswordBox x:Name="HiddenPasswordBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="369" Canvas.Top="178"/>
+
+            <Label Height="45"></Label>
+
+            <TextBox x:Name="PasswordConfirmTextBox" Text="Confirm Password" GotFocus="PasswordConfirm" Height="20" Width="112" Canvas.Left="369" Canvas.Top="254"/>
+            <PasswordBox x:Name="HiddenPasswordConfirmBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="369" Canvas.Top="254"/>
+            <Label Height="45"></Label>
+
+
+
+            <Button Height="26" Width="120" FontSize="15" Canvas.Left="365" Canvas.Top="352">Sign-Up</Button>
+
+
+        </Canvas>
+
+    </Viewbox>
 </Page>
