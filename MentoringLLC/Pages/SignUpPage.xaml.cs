@@ -20,9 +20,88 @@ namespace MentoringLLC.Pages
     /// </summary>
     public partial class SignUpPage : Page
     {
-        public SignUpPage()
+        public bool LI_UsedUsernameBox { get; set; }
+        public bool LI_UsedPasswordBox { get; set; }
+
+        public string LI_UsernameEmailContent { get; set; }
+        public string LI_PasswordContent { get; set; }
+
+
+
+
+        public SignUpPage(bool Temp_LI_UsedUsernameBox, bool Temp_LI_UsedPasswordBox, string Temp_LI_UsernameEmailContent, string Temp_LI_PasswordConten)
         {
+            LI_UsedUsernameBox = Temp_LI_UsedUsernameBox;
+            LI_UsedPasswordBox = Temp_LI_UsedPasswordBox;
+            LI_UsernameEmailContent = Temp_LI_UsernameEmailContent;
+            LI_PasswordContent = Temp_LI_PasswordConten;
+
+
+
             InitializeComponent();
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string relativePath = System.IO.Path.Combine("Pages", "Resources", "WPFMentor.mp4");
+            string dynamicPath = System.IO.Path.Combine(baseDirectory, relativePath);
+            Background.Source = new Uri(dynamicPath);
+
+            if (LI_UsedUsernameBox)
+            {
+                UsernameBox.Text = string.Empty;
+            }
+            if (LI_UsedPasswordBox)
+            {
+                HiddenPasswordBox.Visibility = Visibility.Visible;
+                PasswordTextBox.Visibility = Visibility.Hidden;
+            }
+            if (LI_UsedPasswordBox)
+            {
+                HiddenPasswordBox.Password = LI_PasswordContent;
+            }
+
+
+            if (LI_UsernameEmailContent.Contains("@") && LI_UsedUsernameBox)
+            {
+                EmailBox.Text = LI_UsernameEmailContent;
+            }
+            else if (LI_UsedUsernameBox)
+            {
+                UsernameBox.Text = LI_UsernameEmailContent;
+            }
+            
+           
+
+
         }
+        private void SignUpButton(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Username(object sender, RoutedEventArgs e)
+        {
+            if (!LI_UsedUsernameBox)
+            UsernameBox.Text = string.Empty;
+        }
+        private void Password(object sender, RoutedEventArgs e)
+        {
+
+            if (!LI_UsedPasswordBox) { 
+            HiddenPasswordBox.Visibility = Visibility.Visible;
+            PasswordTextBox.Visibility = Visibility.Hidden;
+            HiddenPasswordBox.Focus();
+            }
+        }
+        private void PasswordConfirm(object sender, RoutedEventArgs e)
+        {
+            HiddenPasswordConfirmBox.Visibility = Visibility.Visible;
+            PasswordConfirmTextBox.Visibility = Visibility.Hidden;
+            HiddenPasswordConfirmBox.Focus();
+        }
+        private void EMail(object sender, RoutedEventArgs e)
+        {
+            if (!(LI_UsernameEmailContent.Contains("@") && LI_UsedUsernameBox))
+            EmailBox.Text = string.Empty;
+        }
+
     }
 }

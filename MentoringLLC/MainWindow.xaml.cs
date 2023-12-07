@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MentoringLLC.Pages;
 
 namespace MentoringLLC
 {
@@ -20,16 +21,17 @@ namespace MentoringLLC
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow instance; 
         public MainWindow()
         {
             InitializeComponent();
-       
             NavigateToLoginPage();
+            instance = this;
         }
 
         private void NavigateToLoginPage()
         {
-            mainWindowframe.Content = new LogInPage();
+            mainWindowFrame.Content = new LogInPage();
         }
 
 
