@@ -14,10 +14,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using MentoringLLC;
 namespace MentoringLLC
 {
     /// <summary>
+    /// Interaction logic for MainWindow.xaml
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
@@ -25,7 +26,7 @@ namespace MentoringLLC
         public MainWindow()
         {
             InitializeComponent();
-            mainWindowFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
+            mainWindowframe.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
             NavigateToLoginPage();
         }
 
