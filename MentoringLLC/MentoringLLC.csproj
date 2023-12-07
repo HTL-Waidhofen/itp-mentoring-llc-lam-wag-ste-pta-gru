@@ -9,10 +9,34 @@
 
   <ItemGroup>
     <None Remove="HTL-Logo.png" />
+    <None Remove="Pages\Sidebar_images\add.png" />
+    <None Remove="Pages\Sidebar_images\calender.png" />
+    <None Remove="Pages\Sidebar_images\chat.png" />
+    <None Remove="Pages\Sidebar_images\exit.png" />
+    <None Remove="Pages\Sidebar_images\question.png" />
+    <None Remove="Pages\Sidebar_images\settings.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="HTL-Logo.png" />
+    <Resource Include="Pages\Sidebar_images\add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pages\Sidebar_images\calender.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pages\Sidebar_images\chat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pages\Sidebar_images\exit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pages\Sidebar_images\question.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pages\Sidebar_images\settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>

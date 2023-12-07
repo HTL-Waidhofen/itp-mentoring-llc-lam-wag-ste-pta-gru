@@ -1,4 +1,5 @@
-﻿using MentoringLLC.Pages;
+﻿using MentoringLLC.Interfaces;
+using MentoringLLC.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MentoringLLC.Pages;
 
 namespace MentoringLLC
 {
@@ -25,15 +25,14 @@ namespace MentoringLLC
         public MainWindow()
         {
             InitializeComponent();
-            mainWindowframe.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
+            mainWindowFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
             NavigateToLoginPage();
         }
 
         private void NavigateToLoginPage()
         {
-            mainWindowframe.Content = new FAQ();
+            mainWindowFrame.Content = new FAQ();
+            sideBarFrame.Content = new Sidebar();
         }
-
-
     }
 }

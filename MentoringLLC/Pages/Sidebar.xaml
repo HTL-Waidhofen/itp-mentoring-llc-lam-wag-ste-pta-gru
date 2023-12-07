@@ -5,15 +5,21 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MentoringLLC.Interfaces"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="50"
+      d:DesignHeight="450" d:DesignWidth="850"
       Title="Sidebar">
-    <StackPanel Background="White">
-        <Image Margin="5,5,5,5" Height="50"></Image>
-        <Image Margin="5,5,5,5" Height="50" Source="/Pages/Sidebar_images/calender.png"></Image>
-        <Image Margin="5,5,5,5" Height="50" Source="/Pages/Sidebar_images/chat.png"></Image>
-        <Image Margin="5,5,5,5" Height="50" Source="/Pages/Sidebar_images/add.png"></Image>
-        <Image Margin="5,5,5,5" Height="50"></Image>
-        <Image Margin="5,45,5,5" Height="50" Source="/Pages/Sidebar_images/settings.png"></Image>
-        <Image Margin="5,5,5,5" Height="50" Source="/Pages/Sidebar_images/exit.png"></Image>
-    </StackPanel>
+    <Viewbox>
+        <Canvas Height="450" Width="850">
+            <Border BorderBrush="Gray" BorderThickness="3" Height="586" Width="69" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="-26" Canvas.Left="-19">
+                
+            </Border>
+            <StackPanel>
+                <Image Height="40" Source="/Pages/Sidebar_images/settings.png"/>
+                <Image Height="40" Source="/Pages/Sidebar_images/calender.png"/>
+                <Image Height="40" Source="/Pages/Sidebar_images/chat.png"/>
+                <Image Height="40" Source="/Pages/Sidebar_images/add.png"/>
+                <Image Height="40" Source="/Pages/Sidebar_images/exit.png"/>
+            </StackPanel>
+        </Canvas>
+    </Viewbox>
+
 </Page>
