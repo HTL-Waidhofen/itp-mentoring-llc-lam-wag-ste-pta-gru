@@ -8,34 +8,24 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Profilviewer">
 
-    <DockPanel LastChildFill="False">
-        <!-- 1: Profilbild, Name + Buttons -->
-        <StackPanel Orientation="Horizontal" Height="150" DockPanel.Dock="Top">
+    <Viewbox>
+        <Canvas MinWidth="800" MinHeight="450">
+            <!-- 1: Profilbild, Name + Buttons -->
+            <Image Height="100" Width="100" Canvas.Left="20" Canvas.Top="10"  ></Image>
+                
+                    <TextBox x:Name="Mname" Width="400" Height="100" Canvas.Left="200" Canvas.Top="10" FontSize="70" TextAlignment="Center" IsReadOnly="True" ></TextBox>
+                    <!-- Stackpanel für Icons -->
+                    <StackPanel Height="50" Width="400" Canvas.Left="200" Canvas.Top="110" ></StackPanel>
 
-            <StackPanel Width="200" Orientation="Horizontal">
-                <Image Height="100" Width="100" HorizontalAlignment="Center" ></Image>
-            </StackPanel>
+            <!-- 2: Fächer, Termine -->
 
-            <StackPanel  Width="400">
-                <TextBox x:Name="Mname" Height="100" FontSize="70" TextAlignment="Center" IsReadOnly="True" ></TextBox>
-                <!-- Stackpanel für Icons -->
-                <StackPanel Height="50" ></StackPanel>
-            </StackPanel >
+            <ListBox x:Name="Faecher" Height="250" Width="300" Canvas.Left="20" Canvas.Top="160"></ListBox>
 
-        </StackPanel >
-        
-        <!-- 2: Fächer, Termine -->
-        <StackPanel DockPanel.Dock="Top" Height="200" Orientation="Horizontal">
-            <StackPanel Width="400">
-                <ListBox x:Name="Faecher" Height="200" Width="300" ></ListBox>
-            </StackPanel>
-            <StackPanel Width="400">
-                <ListBox x:Name="Termine" Height="200" Width="350" ></ListBox>
-            </StackPanel>
-           
+            <ListBox x:Name="Termine" Height="250" Width="350" Canvas.Left="430" Canvas.Top="160"></ListBox>
+               
             
-        </StackPanel>
-        <!--3: Void  -->
-        <StackPanel DockPanel.Dock="Top" Height="100"></StackPanel>
-    </DockPanel>
+        </Canvas>
+    </Viewbox>
+    
+   
 </Page>
