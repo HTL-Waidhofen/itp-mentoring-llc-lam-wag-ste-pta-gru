@@ -9,7 +9,7 @@
         Title="Termine" >
     <Viewbox>
         <Canvas MinHeight="450" MinWidth="800">
-            <Grid Background="DimGray" Height="450" Width="800">
+            <Grid Height="450" Width="800">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="1.5*" />
@@ -24,7 +24,6 @@
                 </Grid.RowDefinitions>
 
                 <Label Grid.Column="2" FontSize="50" HorizontalAlignment="Center">Einstellungen</Label>
-                <Image Grid.Column="4" Source="\Images\HTL.png" Height="80" HorizontalAlignment="Right" VerticalAlignment="Top"></Image>
                 <ListBox Grid.Row="1" Grid.Column="1" Background="Gray" FontSize="28" FontFamily="Arial">
                     <ListBoxItem MouseDown="ListBoxItem_MouseDown">Profil</ListBoxItem>
                     <ListBoxItem MouseDown="ListBoxItem_MouseDown_1">Erscheinung</ListBoxItem>

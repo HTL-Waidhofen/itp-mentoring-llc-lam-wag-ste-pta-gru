@@ -31,7 +31,7 @@ namespace MentoringLLC.Interfaces
 
         private void ListBoxItem_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
-
+            
         }
 
         private void ListBoxItem_MouseDown_2(object sender, MouseButtonEventArgs e)
