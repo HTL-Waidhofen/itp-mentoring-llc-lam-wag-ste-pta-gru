@@ -28,7 +28,7 @@ namespace MentoringLLC
         
         public MainWindow()
         {
-            NavigateToLoginPage();
+            InitializeComponent();
             instance = this;
             mainWindowFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
             NavigateToLoginPage();
@@ -36,7 +36,7 @@ namespace MentoringLLC
 
         private void NavigateToLoginPage()
         {
-            mainWindowFrame.Content = new Einstellungen();
+            mainWindowFrame.Content = new Dashboard();
             sideBarFrame.Content = new Sidebar();
         }
     }

@@ -9,32 +9,32 @@
 
   <ItemGroup>
     <None Remove="HTL-Logo.png" />
-    <None Remove="Pages\Sidebar_images\add.png" />
-    <None Remove="Pages\Sidebar_images\calender.png" />
-    <None Remove="Pages\Sidebar_images\chat.png" />
-    <None Remove="Pages\Sidebar_images\exit.png" />
-    <None Remove="Pages\Sidebar_images\question.png" />
-    <None Remove="Pages\Sidebar_images\settings.png" />
+    <None Remove="Images\Sidebar_images\add.png" />
+    <None Remove="Images\Sidebar_images\calender.png" />
+    <None Remove="Images\Sidebar_images\chat.png" />
+    <None Remove="Images\Sidebar_images\exit.png" />
+    <None Remove="Images\Sidebar_images\question.png" />
+    <None Remove="Images\Sidebar_images\settings.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="HTL-Logo.png" />
-    <Resource Include="Pages\Sidebar_images\add.png">
+    <Resource Include="Images\HTL-Logo.png" />
+    <Resource Include="Images\Sidebar_images\add.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Pages\Sidebar_images\calender.png">
+    <Resource Include="Images\Sidebar_images\calender.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Pages\Sidebar_images\chat.png">
+    <Resource Include="Images\Sidebar_images\chat.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Pages\Sidebar_images\exit.png">
+    <Resource Include="Images\Sidebar_images\exit.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Pages\Sidebar_images\question.png">
+    <Resource Include="Images\Sidebar_images\question.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Pages\Sidebar_images\settings.png">
+    <Resource Include="Images\Sidebar_images\settings.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
