@@ -24,13 +24,13 @@
                 </Grid.RowDefinitions>
 
                 <Label Grid.Column="2" FontSize="50" HorizontalAlignment="Center">Einstellungen</Label>
-                <ListBox Grid.Row="1" Grid.Column="1" Background="Gray" FontSize="28" FontFamily="Arial">
+                <ListBox Grid.Row="1" Grid.Column="1"  FontSize="28" FontFamily="Arial">
                     <ListBoxItem MouseDown="ListBoxItem_MouseDown">Profil</ListBoxItem>
                     <ListBoxItem MouseDown="ListBoxItem_MouseDown_1">Erscheinung</ListBoxItem>
                     <ListBoxItem MouseDown="ListBoxItem_MouseDown_2">Sicherheit</ListBoxItem>
                     <ListBoxItem MouseDown="ListBoxItem_MouseDown_3">Mentor</ListBoxItem>
                 </ListBox>
-                <ListBox Grid.Row="1" Grid.Column="2"  Grid.ColumnSpan="2" Background="Gray" FontSize="29">
+                <ListBox Grid.Row="1" Grid.Column="2"  Grid.ColumnSpan="2"  FontSize="29">
                     <ListBoxItem></ListBoxItem>
                 </ListBox>
             </Grid>
