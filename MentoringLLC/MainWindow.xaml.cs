@@ -31,7 +31,7 @@ namespace MentoringLLC
 
         private void NavigateToLoginPage()
         {
-            mainWindowFrame.Content = new FAQ();
+            mainWindowFrame.Content = new TerminErstellen();
             sideBarFrame.Content = new Sidebar();
         }
     }
