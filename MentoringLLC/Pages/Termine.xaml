@@ -9,7 +9,7 @@
         Title="Termine" >
     <Viewbox>
         <Canvas Height="450" Width="800">
-        <Grid Background="DimGray"  Height="450" Width="800">
+        <Grid   Height="450" Width="800">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
@@ -25,12 +25,12 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Column="1" FontSize="50" Grid.ColumnSpan="4" HorizontalAlignment="Center">Meine Termine</Label>
-        <Image Grid.Column="5" Source="HTL.png" Height="70" HorizontalAlignment="Right" VerticalAlignment="Top"></Image>
-        <TextBlock Grid.Row="1" Grid.Column="1" Background="Gray" FontSize="30" TextAlignment="Center">Termin</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="2" Background="Gray" FontSize="30" TextAlignment="Center">Mentor</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="3" Background="Gray" FontSize="30" TextAlignment="Center">Raum</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="4" Background="Gray" FontSize="30" TextAlignment="Center">Datum</TextBlock>
-        <ListBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Background="Gray">Placeholder :)</ListBox>
+        
+        <TextBlock Grid.Row="1" Grid.Column="1" FontSize="30" TextAlignment="Center">Termin</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="2" FontSize="30" TextAlignment="Center">Mentor</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="3" FontSize="30" TextAlignment="Center">Raum</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="4" FontSize="30" TextAlignment="Center">Datum</TextBlock>
+        <ListBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" FontSize="15">Placeholder :)</ListBox>
     </Grid>
     </Canvas>
     </Viewbox>
