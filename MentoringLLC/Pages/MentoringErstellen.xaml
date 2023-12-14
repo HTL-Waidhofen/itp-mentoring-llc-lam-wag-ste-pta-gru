@@ -10,7 +10,7 @@
     <Grid>
         <TextBox HorizontalAlignment="Left" Margin="173,161,0,0" TextWrapping="Wrap" Text="filiale" VerticalAlignment="Top" Width="129" TextChanged="TextBox_TextChanged"/>
         <DatePicker HorizontalAlignment="Left" Margin="238,257,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="400,259,0,0" VerticalAlignment="Top" Width="129"/>
+        <ComboBox HorizontalAlignment="Left" Margin="400,259,0,0" VerticalAlignment="Top" Width="129" SelectionChanged="ComboBox_SelectionChanged"/>
         <TextBox HorizontalAlignment="Left" Margin="454,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" TextChanged="TextBox_TextChanged"/>
         <TextBox HorizontalAlignment="Left" Margin="187,299,0,0" TextWrapping="Wrap" Text="beschreibung von termin" VerticalAlignment="Top" Width="396" TextChanged="TextBox_TextChanged" Height="48"/>
         <Button Content="erstellen" HorizontalAlignment="Left" Margin="367,391,0,0" VerticalAlignment="Top"/>
