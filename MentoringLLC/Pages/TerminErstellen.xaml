@@ -13,24 +13,24 @@
 
             <TextBox x:Name="Headline" Height="80" Canvas.Left="190" Canvas.Top="10" FontSize="50" TextAlignment="Center" IsReadOnly="True" Width="380" >Termin erstellen</TextBox>
 
-            <Label x:Name="HTitel" Width="40" Height="25" Canvas.Left="190" Canvas.Top="155" Content="Titel" Foreground="Gray"  ></Label>
-            <TextBox x:Name="TitelTB" Width="130" Height="20" Canvas.Left="190" Canvas.Top="160" TextChanged="TitelTB_TextChanged" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Label x:Name="HTitel" Width="40" Height="25" Canvas.Left="150" Canvas.Top="155" Content="Titel" Foreground="Gray"  ></Label>
+            <TextBox x:Name="TitelTB" Width="130" Height="20" Canvas.Left="150" Canvas.Top="160" TextChanged="TitelTB_TextChanged" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" />
 
-            <ComboBox x:Name="CBFach" Width="100" Height="20" Canvas.Top="160" Canvas.Left="400"  IsEditable="True" IsReadOnly="True" Text="Fach Auswahl" HorizontalAlignment="Left" VerticalAlignment="Center"></ComboBox>
-            <Label x:Name="HOrt" Width="40" Height="25" Canvas.Left="600" Canvas.Top="155" Content="Ort" Foreground="Gray"  ></Label>
-            <TextBox x:Name="OrtTB" Width="100" Height="20" Canvas.Left="600" TextChanged="OrtTB_TextChanged" Background="{x:Null}" Canvas.Top="160" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ComboBox x:Name="CBFach" Width="100" Height="20" Canvas.Top="160" Canvas.Left="350"  IsEditable="True" IsReadOnly="True" Text="Fach Auswahl" HorizontalAlignment="Left" VerticalAlignment="Center"></ComboBox>
+            <Label x:Name="HOrt" Width="40" Height="25" Canvas.Left="550" Canvas.Top="155" Content="Ort" Foreground="Gray"  ></Label>
+            <TextBox x:Name="OrtTB" Width="100" Height="20" Canvas.Left="550" TextChanged="OrtTB_TextChanged" Background="{x:Null}" Canvas.Top="160" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="190" Canvas.Top="230"/>
+            <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="150" Canvas.Top="230"/>
 
-            <Label x:Name="HTime" Width="50" Height="25" Canvas.Left="400" Canvas.Top="230" Content="Uhrzeit" Foreground="Gray"  ></Label>
-            <TextBox x:Name="TimeTB" Width="100" Height="20" Canvas.Left="400" Canvas.Top="232"  TextChanged="TimeTB_TextChanged" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label x:Name="HTime" Width="50" Height="25" Canvas.Left="350" Canvas.Top="230" Content="Uhrzeit" Foreground="Gray"  ></Label>
+            <TextBox x:Name="TimeTB" Width="100" Height="20" Canvas.Left="350" Canvas.Top="232"  TextChanged="TimeTB_TextChanged" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" />
 
-            <Label x:Name="HTeilnehmer" Width="120" Height="25" Canvas.Left="596" Canvas.Top="230" Content="Teilnehmer Anzahl" Foreground="Gray"  ></Label>
-            <TextBox x:Name="TeilnehmerTB" Width="100"  Canvas.Left="600" Canvas.Top="233" TextChanged="TeilnehmerTB_TextChanged" Background="{x:Null}"/>
+            <Label x:Name="HTeilnehmer" Width="120" Height="25" Canvas.Left="550" Canvas.Top="230" Content="Teilnehmer Anzahl" Foreground="Gray"  ></Label>
+            <TextBox x:Name="TeilnehmerTB" Width="100"  Canvas.Left="555" Canvas.Top="233" TextChanged="TeilnehmerTB_TextChanged" Background="{x:Null}"/>
 
-            <Label x:Name="HBeschreibung" Width="200" Height="25" Canvas.Left="250" Canvas.Top="300" Content="Beschreibung des Inhaltes" Foreground="Gray"  ></Label>
-            <TextBox x:Name="BeschreibungTB" VerticalAlignment="Top" Width="400"  Height="50" Canvas.Left="252" Canvas.Top="300" TextChanged="BeschreibungTB_TextChanged" Background="{x:Null}"/>
-            <Button Content="Termin erstellen" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="426" Canvas.Top="370"/>
+            <Label x:Name="HBeschreibung" Width="200" Height="25" Canvas.Left="200" Canvas.Top="300" Content="Beschreibung des Inhaltes" Foreground="Gray"  ></Label>
+            <TextBox x:Name="BeschreibungTB" VerticalAlignment="Top" Width="400"  Height="50" Canvas.Left="200" Canvas.Top="300" TextChanged="BeschreibungTB_TextChanged" Background="{x:Null}"/>
+            <Button Content="Termin erstellen" Width="100" Canvas.Left="350" Canvas.Top="370"/>
 
         </Canvas>
     </Viewbox>
