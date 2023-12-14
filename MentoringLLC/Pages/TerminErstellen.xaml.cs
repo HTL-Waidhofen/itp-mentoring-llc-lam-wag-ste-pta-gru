@@ -24,5 +24,17 @@ namespace MentoringLLC.Pages
         {
             InitializeComponent();
         }
+
+        private void TitelTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (TitelTB.Text.Length == 0)
+            {
+                HTitel.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                HTitel.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }

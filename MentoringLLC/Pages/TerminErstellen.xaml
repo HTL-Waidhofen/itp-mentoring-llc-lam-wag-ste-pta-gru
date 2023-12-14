@@ -10,19 +10,24 @@
 
     <Viewbox>
         <Canvas Height="450" Width="800">
-            <Grid>
-                <TextBox HorizontalAlignment="Left" Margin="173,161,0,0" TextWrapping="Wrap" Text="filiale" VerticalAlignment="Top" Width="129" />
-                <DatePicker HorizontalAlignment="Left" Margin="238,257,0,0" VerticalAlignment="Top"/>
-                <ComboBox HorizontalAlignment="Left" Margin="400,259,0,0" VerticalAlignment="Top" Width="129"/>
-                <TextBox HorizontalAlignment="Left" Margin="454,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" />
-                <TextBox HorizontalAlignment="Left" Margin="187,299,0,0" TextWrapping="Wrap" Text="beschreibung von termin" VerticalAlignment="Top" Width="396"  Height="48"/>
-                <Button Content="erstellen" HorizontalAlignment="Left" Margin="367,391,0,0" VerticalAlignment="Top"/>
-                <TextBlock TextWrapping="Wrap" Margin="281,106,123,278" FontSize="22"><Run Language="de-de" Text="mentoring erstellen"/></TextBlock>
-                <TextBox HorizontalAlignment="Left" Margin="440,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129"  Text="anzahl teilenehmer"/>
-                <Label Content="termin" HorizontalAlignment="Left" Margin="238,226,0,0" VerticalAlignment="Top" Width="129"/>
-                <Label Content="ort" HorizontalAlignment="Left" Margin="400,228,0,0" VerticalAlignment="Top" Width="129"/>
 
-            </Grid>
+            <TextBox x:Name="Headline" Height="80" Canvas.Left="200" Canvas.Top="10" FontSize="50" TextAlignment="Center" IsReadOnly="True" Width="380" >Termin erstellen</TextBox>
+
+            
+            <TextBox x:Name="TitelTB" Width="200" Height="20" Canvas.Left="160" Canvas.Top="160" TextChanged="TitelTB_TextChanged" />
+            <Label x:Name="HTitel" Width="40" Height="25" Canvas.Left="160" Canvas.Top="155" Content="Titel" Foreground="Gray" ></Label>
+            
+            <DatePicker HorizontalAlignment="Left" Margin="238,257,0,0" VerticalAlignment="Top"/>
+            <ComboBox HorizontalAlignment="Left" Margin="400,259,0,0" VerticalAlignment="Top" Width="129"/>
+            <TextBox HorizontalAlignment="Left" Margin="454,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" />
+            <TextBox HorizontalAlignment="Left" Margin="187,299,0,0" TextWrapping="Wrap" Text="beschreibung von termin" VerticalAlignment="Top" Width="396"  Height="48"/>
+            <Button Content="erstellen" HorizontalAlignment="Left" Margin="367,391,0,0" VerticalAlignment="Top"/>
+
+            <TextBox HorizontalAlignment="Left" Margin="440,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129"  Text="anzahl teilenehmer"/>
+            <Label Content="termin" HorizontalAlignment="Left" Margin="238,226,0,0" VerticalAlignment="Top" Width="129"/>
+            <Label Content="ort" HorizontalAlignment="Left" Margin="400,228,0,0" VerticalAlignment="Top" Width="129"/>
+
+
         </Canvas>
     </Viewbox>
 </Page>
