@@ -5,6 +5,7 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>MentoringIco.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +16,10 @@
     <None Remove="Images\Sidebar_images\exit.png" />
     <None Remove="Images\Sidebar_images\question.png" />
     <None Remove="Images\Sidebar_images\settings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="MentoringIco.ico" />
   </ItemGroup>
 
   <ItemGroup>

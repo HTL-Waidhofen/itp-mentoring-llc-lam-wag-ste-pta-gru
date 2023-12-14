@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MentoringLLC"
         mc:Ignorable="d"
         SizeToContent="WidthAndHeight"
-        Title="MainWindow" Height="450" Width="850"  MinHeight="450" MinWidth="850" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="HTL Waidhofen Mentoring" Height="450" Width="850"  MinHeight="450" MinWidth="850" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
         <Frame Name="sideBarFrame" HorizontalAlignment="Left"/>
         <Frame Name="mainWindowFrame" Margin="50,0,0,0"/>
