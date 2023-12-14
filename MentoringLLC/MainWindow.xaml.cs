@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MentoringLLC.Pages;
+using MentoringLLC.Pages.Einstellungspages;
 
 namespace MentoringLLC
 {
@@ -36,7 +37,7 @@ namespace MentoringLLC
 
         private void NavigateToLoginPage()
         {
-            mainWindowFrame.Content = new Dashboard();
+            mainWindowFrame.Content = new Erscheinung();
             sideBarFrame.Content = new Sidebar();
         }
     }
