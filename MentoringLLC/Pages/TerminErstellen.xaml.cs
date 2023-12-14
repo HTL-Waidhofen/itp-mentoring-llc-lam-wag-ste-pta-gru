@@ -36,5 +36,53 @@ namespace MentoringLLC.Pages
                 HTitel.Visibility = Visibility.Hidden;
             }
         }
+
+        private void OrtTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (OrtTB.Text.Length == 0)
+            {
+                HOrt.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                HOrt.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void TimeTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (TimeTB.Text.Length == 0)
+            {
+                HTime.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                HTime.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void TeilnehmerTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (TeilnehmerTB.Text.Length == 0)
+            {
+                HTeilnehmer.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                HTeilnehmer.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void BeschreibungTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (BeschreibungTB.Text.Length == 0)
+            {
+                HBeschreibung.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                HBeschreibung.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }
