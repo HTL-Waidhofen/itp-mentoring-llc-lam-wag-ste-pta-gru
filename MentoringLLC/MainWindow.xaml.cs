@@ -1,5 +1,6 @@
 using MentoringLLC.Interfaces;
 using MentoringLLC.Pages;
+using MentoringLLC.Pages.Admin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace MentoringLLC
 
         private void NavigateToLoginPage()
         {
-            mainWindowFrame.Content = new TerminErstellen();
+            mainWindowFrame.Content = new ban_User();
             sideBarFrame.Content = new Sidebar();
         }
     }

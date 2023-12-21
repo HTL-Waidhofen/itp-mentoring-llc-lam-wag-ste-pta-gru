@@ -10,8 +10,16 @@
 
     <Viewbox>
         <Canvas Height="450" Width="800">
-            
-            
+
+            <TextBox x:Name="UserSearch" Width="250" Height="25" Canvas.Left="275" Canvas.Top="60" HorizontalAlignment="Left" VerticalAlignment="Center" TextInput="UserSearch_TextInput"></TextBox>
+
+
+            <ListBox x:Name="UserListbox" Width="400" Height="200" Canvas.Left="200" Canvas.Top="110" HorizontalAlignment="Center" VerticalAlignment="Top" ></ListBox>
+
+            <Button x:Name="BUserBan" Width="50" Height="25" Canvas.Left="200" Canvas.Top="360" Click="BUserBan_Click">Ban</Button>
+            <Button x:Name="BUserEdit" Width="50" Height="25" Canvas.Left="375" Canvas.Top="360" HorizontalAlignment="Center" VerticalAlignment="Center" Click="BUserEdit_Click">Edit</Button>
+            <Button x:Name="BUserUnban" Width="50" Height="25" Canvas.Left="550" Canvas.Top="360" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BUserUnban_Click">Unban</Button>
+
         </Canvas>
     </Viewbox>
 </Page>

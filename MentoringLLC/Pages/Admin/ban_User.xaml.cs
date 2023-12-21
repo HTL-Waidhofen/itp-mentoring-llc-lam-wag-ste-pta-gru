@@ -24,5 +24,17 @@ namespace MentoringLLC.Pages.Admin
         {
             InitializeComponent();
         }
+
+        private void UserSearch_TextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (UserSearch.Text.Length==0)
+            {
+               //Alle User werden in der Textbox angezeigt
+            }
+            else
+            {
+                //all User mit dieser Buchstabenreihenfolge werden in der LB angezeigt
+            }
+        }
     }
 }
