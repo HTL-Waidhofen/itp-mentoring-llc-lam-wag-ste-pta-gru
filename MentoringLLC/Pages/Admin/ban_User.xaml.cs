@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MentoringLLC.Pages.Admin
 {
@@ -25,51 +26,52 @@ namespace MentoringLLC.Pages.Admin
         public ban_User()
         {
             InitializeComponent();
+            //fill_lBox(test);
 
         }
         private void fill_lBox(List<string> Data, string searchstrg="")
         {
-            if (searchstrg == "")
-            {
-                foreach (string s in Data)
-                    UserListbox.Items.Add(s);
-            }
-            else
-            {
-
-            }
-                
             
+            foreach (string s in Data)
+            {
+                if(s.Contains(searchstrg)||searchstrg=="")
+                UserListbox.Items.Add(s);
+            }
+
         }
         private void UserSearch_TextInput(object sender, TextCompositionEventArgs e)
         {
+          
+            //fill_lBox(test);
             //nick- oder username zum suchen eingeben
-            if (UserSearch.Text.Length==0)
+            if (UserSearch.Text.Length!=0)
             {
                 string searchstrg= UserSearch.Text;
-                
+               // fill_lBox(test,searchstrg);
 
             }
-            else
-            {
-                List<string> test = new List<string>();
-                fill_lBox(test);
-            }
+            //else
+            //    fill_lBox(test);
+            
         }
 
         private void BUserBan_Click(object sender, RoutedEventArgs e)
         {
+            int index=UserListbox.SelectedIndex;
+           
 
+            //hier code einfügen für is banned, der gebannte User wird dann rot angezeigt
         }
 
         private void BUserEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            // hier automatisch nick name, profilbild und ismentor hin übertragen
         }
 
         private void BUserUnban_Click(object sender, RoutedEventArgs e)
         {
 
+            //funktioniert ähnlich wie BUserBan_Click
         }
     }
 }
