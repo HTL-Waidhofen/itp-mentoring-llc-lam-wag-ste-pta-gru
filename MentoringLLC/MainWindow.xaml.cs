@@ -25,14 +25,15 @@ namespace MentoringLLC
     {
         public MainWindow()
         {
+            
             InitializeComponent();
             mainWindowFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
             NavigateToLoginPage();
         }
 
-        private void NavigateToLoginPage()
+        public void NavigateToLoginPage()
         {
-            mainWindowFrame.Content = new ban_User();
+            mainWindowFrame.Content = new TerminErstellen();
             sideBarFrame.Content = new Sidebar();
         }
     }

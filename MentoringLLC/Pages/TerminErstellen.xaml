@@ -11,7 +11,7 @@
     <Viewbox>
         <Canvas Height="450" Width="800">
 
-            <TextBox x:Name="Headline" Height="80" Canvas.Left="190" Canvas.Top="10" FontSize="50" TextAlignment="Center" IsReadOnly="True" Width="380" >Termin erstellen</TextBox>
+            <TextBlock x:Name="Headline" Height="80" Canvas.Left="190" Canvas.Top="10" FontSize="50" TextAlignment="Center" Width="380" >Termin erstellen</TextBlock>
 
             <Label x:Name="HTitel" Width="40" Height="25" Canvas.Left="200" Canvas.Top="158" Content="Titel" Foreground="Gray"  ></Label>
             <TextBox x:Name="TitelTB" Width="130" Height="20" Canvas.Left="200" Canvas.Top="160" TextChanged="TitelTB_TextChanged" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" />

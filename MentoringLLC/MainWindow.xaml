@@ -10,7 +10,7 @@
     
     <Grid>
         <Frame Name="sideBarFrame" HorizontalAlignment="Left"/>
-        <Frame Name="mainWindowFrame" Margin="50,0,0,0"/>
+        <Frame x:Name="mainWindowFrame" Margin="50,0,0,0"/>
         <Image Margin="10" Width="100" Height="70" Source="/HTL-Logo.png" VerticalAlignment="Top"  HorizontalAlignment="Right"/>
     </Grid>
    
