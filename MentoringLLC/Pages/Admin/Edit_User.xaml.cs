@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +25,35 @@ namespace MentoringLLC.Pages.Admin
         {
             InitializeComponent();
         }
+
+        private void UploadButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Image files (*.png;*.jpeg)|*.png;*.jpeg|All files (*.*)|*.*";
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    ImagePreview.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+                    FeedbackMsg.Foreground = Brushes.Green;
+                    FeedbackMsg.Text = "Bild erfolgreich hochgeladen";
+
+                }
+            }
+            catch
+            (Exception ex)
+            {
+                FeedbackMsg.Foreground = Brushes.Red;
+                FeedbackMsg.Text = "Bild konnte nicht hochgeladen werden";
+            }
+           
+
+        }
+
+        private void ApplyButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.instance.Content = new Pages.Admin.ban_User();
+        }
     }
 }
+
