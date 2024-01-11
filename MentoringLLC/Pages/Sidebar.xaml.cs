@@ -29,24 +29,27 @@ namespace MentoringLLC.Interfaces
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)//Profil
         {
-            NavigationService.Navigate(new Uri("Profilviewer.xaml", UriKind.Relative));
+            MainWindow.instance.Content = new Profilviewer();
         }
 
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)//Termine
         {
-            mainWindowFrame.Navigate(new Pages.TerminErstellen());
+           // MainWindow.instance.Content = new Termine();
         }
 
         private void Image_MouseDown_2(object sender, MouseButtonEventArgs e)//Chat
         {
+           // MainWindow.instance.Content = new Chat();
         }
 
         private void Image_MouseDown_3(object sender, MouseButtonEventArgs e)//Add (?)
         {
+            MainWindow.instance.Content = new TerminErstellen();
         }
 
         private void Image_MouseDown_4(object sender, MouseButtonEventArgs e)//Settings
         {
+            MainWindow.instance.Content = new Einstellungen();
         }
 
         private void Image_MouseDown_5(object sender, MouseButtonEventArgs e)//Exit
@@ -56,6 +59,7 @@ namespace MentoringLLC.Interfaces
 
         private void Image_MouseDown_6(object sender, MouseButtonEventArgs e)//Help
         {
+            MainWindow.instance.Content = new FAQ();
         }
     }
 }
