@@ -23,11 +23,12 @@ namespace MentoringLLC
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow instance;
         public MainWindow()
         {
             InitializeComponent();
-            mainWindowFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
             NavigateToLoginPage();
+            instance = this;
         }
 
         private void NavigateToLoginPage()

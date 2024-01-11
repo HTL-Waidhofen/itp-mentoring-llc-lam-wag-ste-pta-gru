@@ -64,7 +64,7 @@ namespace MentoringLLC.Pages.Admin
 
         private void BUserEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow.instance.Content = new Pages.Admin.Edit_User();
         }
 
         private void BUserUnban_Click(object sender, RoutedEventArgs e)
