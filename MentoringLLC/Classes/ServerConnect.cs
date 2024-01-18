@@ -11,12 +11,13 @@ namespace MentoringLLC.Classes
 public class ServerConnect
 
     {
-
+        public static SimpleTcpClient client = new SimpleTcpClient("45.142.114.49:9000");
+        public static List<User> UserList { get; set; }
         public static void Connect()
 
         {
 
-            SimpleTcpClient client = new SimpleTcpClient("45.142.114.49:9000");
+           
 
             // set events
 
@@ -32,21 +33,8 @@ public class ServerConnect
 
             // once connected to the server...
 
-            while (true)
-
-            {
-
-                string consolePath = Console.ReadLine();
-
-                if (consolePath == "")
-
-                    consolePath = " ";
-
-                client.Send(consolePath);
-
-                Console.ReadKey();
-
-            }
+            
+            
 
         }
 
@@ -69,6 +57,8 @@ public class ServerConnect
         static void DataReceived(object sender, DataReceivedEventArgs e)
 
         {
+            if (Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count) is string)
+                UserList.Add(new User(Encoding.UTF8.GetString(e.)));
 
             Console.WriteLine($"{Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count)}");
 
