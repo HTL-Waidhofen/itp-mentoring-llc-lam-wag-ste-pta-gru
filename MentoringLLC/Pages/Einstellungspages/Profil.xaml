@@ -33,7 +33,7 @@
                 </ListBox>
                 <Ellipse Grid.Column="2" Grid.Row="1" Width="100" Height="100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,10" Fill="Beige" ></Ellipse>
                 <Label Grid.Column="2" Grid.Row="1" Margin="120,45,0,0" Height="40" VerticalAlignment="Top" FontSize="17">Benutzername placeholder</Label>
-                <Label Grid.Column="2" Grid.Row="1"  Height="40" Margin="20,120,0,110" FontSize="20" Width="211" HorizontalAlignment="Left">Benutzername Ändern</Label>
+                <Label Grid.Column="2" Grid.Row="1"  Height="40" Margin="20,120,0,110" FontSize="20" Width="211" HorizontalAlignment="Left">Benutzername ändern</Label>
                 <Button Grid.Column="2" Grid.Row="1" Height="20" Width="70" Margin="236,130,36,120">Bestätigen</Button>
             </Grid>
         </Canvas>
