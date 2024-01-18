@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MentoringLLC.Pages.Einstellungspages;
+using MentoringLLC.Pages;
+using MentoringLLC;
 
 namespace MentoringLLC.Pages.Einstellungspages
 {
@@ -27,7 +30,25 @@ namespace MentoringLLC.Pages.Einstellungspages
 
         private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
         {
+            MainWindow.instance.Content = new Profil();
+        }
 
+        private void ListBoxItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow.instance.Content = new Erscheinung();
+        }
+
+        private void ListBoxItem_Selected_2(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow.instance.Content = new Sicherheit();
+        }
+
+        private void ListBoxItem_Selected_3(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow.instance.Content = new MentorSettings();
         }
     }
 }
