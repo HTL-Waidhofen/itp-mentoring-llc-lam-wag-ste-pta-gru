@@ -24,5 +24,12 @@ namespace MentoringLLC.Pages
         {
             InitializeComponent();
         }
+        private void fill_LBoxes(List<string> Data)
+        {
+
+            foreach (string s in Data)
+                    Faecher.Items.Add(s);
+
+        }
     }
 }
