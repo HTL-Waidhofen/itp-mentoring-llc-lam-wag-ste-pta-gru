@@ -37,7 +37,7 @@ namespace MentoringLLC
 
         private void NavigateToLoginPage()
         {
-            mainWindowFrame.Content = new Erscheinung();
+            mainWindowFrame.Content = new MentorSettings();
             sideBarFrame.Content = new Sidebar();
         }
     }

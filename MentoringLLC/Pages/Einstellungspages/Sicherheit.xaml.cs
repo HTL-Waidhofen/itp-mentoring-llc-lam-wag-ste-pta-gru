@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace MentoringLLC.Pages.Einstellungspages
 {
     /// <summary>
-    /// Interaktionslogik für Erscheinung.xaml
+    /// Interaktionslogik für Sicherheit.xaml
     /// </summary>
-    public partial class Erscheinung : Page
+    public partial class Sicherheit : Page
     {
-        public Erscheinung()
+        public Sicherheit()
         {
             InitializeComponent();
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }
