@@ -12,21 +12,17 @@
 
         <TextBlock Text="Username:" Canvas.Left="100" Canvas.Top="94" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
         <TextBox x:Name="Username" Canvas.Left="160" Canvas.Top="93" Width="200"></TextBox>
-        <TextBlock Text="Password:" Canvas.Left="102" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
-        <TextBox x:Name="Password" Canvas.Left="160" Canvas.Top="133" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBox>
-        <TextBlock Text="E-Mail:" Canvas.Left="110" Canvas.Top="174" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
-        <TextBox x:Name="Email" Canvas.Left="160" Canvas.Top="173" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBox>
-        <TextBlock Text="Nickname:" Canvas.Left="100" Canvas.Top="214" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox x:Name="Nickname" Canvas.Left="160" Canvas.Top="213" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Text="Nickname:" Canvas.Left="100" Canvas.Top="134" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="Nickname" Canvas.Left="160" Canvas.Top="133" Width="200" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
 
-        <Image x:Name="ImagePreview" Height="168" Width="175" Canvas.Left="477" Canvas.Top="85"></Image>
+        <Image Stretch="Fill" x:Name="ImagePreview" Height="168" Width="175" Canvas.Left="477" Canvas.Top="85"></Image>
         <Button Height="27" Width="102" Canvas.Left="514" Canvas.Top="262" Content="Bild hochladen" Click="UploadButton_Click"></Button>
 
-        <TextBlock Text="Admin:" Canvas.Left="160" Canvas.Top="259" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <CheckBox x:Name="IsAdminBox" Canvas.Left="203" Canvas.Top="260" HorizontalAlignment="Left" VerticalAlignment="Top"></CheckBox>
-        <TextBlock Text="Mentor:" Canvas.Left="282" Canvas.Top="259" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
-        <CheckBox x:Name="IsMentorBox" Canvas.Left="344" Canvas.Top="260" HorizontalAlignment="Left" VerticalAlignment="Top"></CheckBox>
+        <TextBlock Text="Admin:" Canvas.Left="160" Canvas.Top="179" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <CheckBox x:Name="IsAdminBox" Canvas.Left="203" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top"></CheckBox>
+        <TextBlock Text="Mentor:" Canvas.Left="282" Canvas.Top="179" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+        <CheckBox x:Name="IsMentorBox" Canvas.Left="344" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top"></CheckBox>
         <TextBlock TextAlignment="Center" Name="FeedbackMsg" Canvas.Left="444" Canvas.Top="306" HorizontalAlignment="Left" VerticalAlignment="Top" Width="242" ></TextBlock>
         <Button Click="ApplyButton_Click" Content="Anwenden" Height="32" Width="78" Canvas.Left="704" Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Center">
         </Button>
