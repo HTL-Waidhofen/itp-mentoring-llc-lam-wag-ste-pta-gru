@@ -26,14 +26,15 @@ namespace MentoringLLC
         public static MainWindow instance;
         public MainWindow()
         {
+            
             InitializeComponent();
             NavigateToLoginPage();
             instance = this;
         }
 
-        private void NavigateToLoginPage()
+        public void NavigateToLoginPage()
         {
-            mainWindowFrame.Content = new ban_User();
+            mainWindowFrame.Content = new TerminErstellen();
             sideBarFrame.Content = new Sidebar();
         }
     }
