@@ -27,16 +27,17 @@ namespace MentoringLLC.Pages.Admin
         public ban_User()
         {
             InitializeComponent();
-            //fill_lBox(test);
+            List<User> users = User.getUserList();
+            fill_lBox(users);
 
         }
-        private void fill_lBox(List<string> Data, string searchstrg="")
+        private void fill_lBox(List<User> Data, string searchstrg="")
         {
             
-            foreach (string s in Data)
+            foreach (User u in Data)
             {
-                if(s.Contains(searchstrg)||searchstrg=="")
-                UserListbox.Items.Add(s);
+                if(u.Username.Contains(searchstrg)||searchstrg==""||u.Nickname.Contains(searchstrg))
+                UserListbox.Items.Add(u);
             }
 
         }
@@ -59,7 +60,9 @@ namespace MentoringLLC.Pages.Admin
         private void BUserBan_Click(object sender, RoutedEventArgs e)
         {
             int index=UserListbox.SelectedIndex;
-           
+            
+            
+
 
             //hier code einfügen für is banned, der gebannte User wird dann rot angezeigt
         }

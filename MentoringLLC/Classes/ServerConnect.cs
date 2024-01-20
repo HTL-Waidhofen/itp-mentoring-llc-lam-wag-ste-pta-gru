@@ -57,8 +57,9 @@ public class ServerConnect
         static void DataReceived(object sender, DataReceivedEventArgs e)
 
         {
+            
             if (Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count) is string)
-                UserList.Add(new User(Encoding.UTF8.GetString(e.)));
+                UserList.Add(new User(Encoding.UTF8.GetString(e.Data.Array)));
 
             Console.WriteLine($"{Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count)}");
 

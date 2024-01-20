@@ -35,26 +35,27 @@ namespace MentoringLLC.Classes
                 TimeBanned = timeBanned;
                 UntilBanned = untilBanned;
             }
-/*
-        public List<User> getUserList()
+
+        public static List<User> getUserList()
         {
             ServerConnect.client.Send("getAllUsers");
-           
-            return UserList;
+            return ServerConnect.UserList;
+            
         }
         public List<User> getUserCensoredList()
         {
+            List<User> returnuserList = new List<User>();
             ServerConnect.Connect();
 
-            foreach (var user in UserList)
+            foreach (var user in ServerConnect.UserList)
             {
                 user.Email = "";
-
+                returnuserList.Add(new User());
             }
                 
-            return UserList;
+            return returnuserList;
         }
-*/
+
 
     }
 }
