@@ -62,15 +62,21 @@ public class ServerConnect
                         if (list.Count == 2)
                         {
                             User tempUser = JsonConvert.DeserializeObject<User>(list[1].Trim());
+                            UserList.Add(tempUser);
                         }
                         break;
                     case "getAllUsersAnswer":
                         if (list.Count == 1)
                         {
                             List<string> allUsers = JsonConvert.DeserializeObject<List<string>>(list[1].Trim());
+                            foreach(string s in allUsers)
+                            {
+                                client.Send($"getUser;{s}");
+                            }
                         }
                      break;
                 }
+                
             }
         }
 

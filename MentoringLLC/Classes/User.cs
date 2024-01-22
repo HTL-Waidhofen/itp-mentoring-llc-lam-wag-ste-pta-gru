@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using MentoringLLC.Pages;
@@ -39,14 +40,13 @@ namespace MentoringLLC.Classes
 
         public static List<User> getUserList()
         {
+            ServerConnect.Connect();
             ServerConnect.client.Send("getAllUsers");
-            Timer aTimer = new System.Timers.Timer(2000);
-            aTimer.Elapsed += OnTimedEvent;
-            aTimer.Enabled = true;
+            Thread.Sleep(3000);
             return ServerConnect.UserList;
             
         }
-        private static void SetTimer()
+      /*  private static void SetTimer()
         {
             // Create a timer with a two second interval.
             Timer aTimer = new System.Timers.Timer(2000);
@@ -55,7 +55,7 @@ namespace MentoringLLC.Classes
             aTimer.AutoReset = true;
             aTimer.Enabled = true;
         }
-
+      */
         private static void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
             Console.WriteLine("The Elapsed event was raised at {0:HH:mm:ss.fff}",

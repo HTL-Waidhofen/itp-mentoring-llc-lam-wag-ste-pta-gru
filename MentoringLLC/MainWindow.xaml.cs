@@ -34,7 +34,7 @@ namespace MentoringLLC
 
         public void NavigateToLoginPage()
         {
-            mainWindowFrame.Content = new TerminErstellen();
+            mainWindowFrame.Content = new ban_User();
             sideBarFrame.Content = new Sidebar();
         }
     }
