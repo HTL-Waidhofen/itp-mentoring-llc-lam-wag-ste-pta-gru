@@ -53,7 +53,6 @@ public class ServerConnect
         static void DataReceived(object sender, DataReceivedEventArgs e)
         {
             string message = Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count);
-            Console.WriteLine(message);
             List<string> list = message.Split(';').ToList();
             if (list.Count > 0)
             {

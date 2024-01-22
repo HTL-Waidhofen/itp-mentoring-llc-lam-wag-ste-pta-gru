@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using MentoringLLC.Pages;
 
 namespace MentoringLLC.Classes
@@ -39,22 +40,28 @@ namespace MentoringLLC.Classes
         public static List<User> getUserList()
         {
             ServerConnect.client.Send("getAllUsers");
+            Timer aTimer = new System.Timers.Timer(2000);
+            aTimer.Elapsed += OnTimedEvent;
+            aTimer.Enabled = true;
             return ServerConnect.UserList;
             
         }
-        public List<User> getUserCensoredList()
+        private static void SetTimer()
         {
-            List<User> returnuserList = new List<User>();
-            ServerConnect.Connect();
-
-            foreach (var user in ServerConnect.UserList)
-            {
-                user.Email = "";
-                returnuserList.Add(new User());
-            }
-                
-            return returnuserList;
+            // Create a timer with a two second interval.
+            Timer aTimer = new System.Timers.Timer(2000);
+            // Hook up the Elapsed event for the timer. 
+            aTimer.Elapsed += OnTimedEvent;
+            aTimer.AutoReset = true;
+            aTimer.Enabled = true;
         }
+
+        private static void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            Console.WriteLine("The Elapsed event was raised at {0:HH:mm:ss.fff}",
+                              e.SignalTime);
+        }
+       
 
 
     }
