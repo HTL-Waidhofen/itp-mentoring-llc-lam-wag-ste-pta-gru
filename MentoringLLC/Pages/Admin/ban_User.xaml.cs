@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
 using MentoringLLC.Classes;
+using Newtonsoft.Json;
 
 namespace MentoringLLC.Pages.Admin
 {
@@ -24,6 +25,7 @@ namespace MentoringLLC.Pages.Admin
     
     public partial class ban_User : Page
     {
+        List<User> users = new List<User>();
         public ban_User()
         {
             InitializeComponent();
@@ -43,28 +45,25 @@ namespace MentoringLLC.Pages.Admin
         }
         private void UserSearch_TextInput(object sender, TextCompositionEventArgs e)
         {
-          
-            //fill_lBox(test);
+
+            fill_lBox(users);
             //nick- oder username zum suchen eingeben
             if (UserSearch.Text.Length!=0)
             {
                 string searchstrg= UserSearch.Text;
-               // fill_lBox(test,searchstrg);
+                fill_lBox(users,searchstrg);
 
             }
-            //else
-            //    fill_lBox(test);
+            else
+                fill_lBox(users);
             
         }
 
         private void BUserBan_Click(object sender, RoutedEventArgs e)
         {
             int index=UserListbox.SelectedIndex;
-            
-            
-
-
-            //hier code einfügen für is banned, der gebannte User wird dann rot angezeigt
+            users[index].IsBanned = 1;
+            ServerConnect.client.Send($"updateUser;{JsonConvert.SerializeObject(users[index])}");
         }
 
         private void BUserEdit_Click(object sender, RoutedEventArgs e)
@@ -74,8 +73,9 @@ namespace MentoringLLC.Pages.Admin
 
         private void BUserUnban_Click(object sender, RoutedEventArgs e)
         {
-
-            //funktioniert ähnlich wie BUserBan_Click
+            int index = UserListbox.SelectedIndex;
+            users[index].IsBanned = 0;
+            ServerConnect.client.Send($"updateUser;{JsonConvert.SerializeObject(users[index])}");
         }
     }
 }
