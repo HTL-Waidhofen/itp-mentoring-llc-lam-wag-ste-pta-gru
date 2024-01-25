@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MentoringLLC.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace MentoringLLC.Pages
         public Profilviewer()
         {
             InitializeComponent();
+        }
+        private void fill_LBoxes(List<string> Data)
+        {
+
+            foreach (string s in Data)
+                    Faecher.Items.Add(s);
+
+          
+            
+            
+
         }
     }
 }

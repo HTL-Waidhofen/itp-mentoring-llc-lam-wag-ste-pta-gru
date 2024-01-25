@@ -1,5 +1,6 @@
 using MentoringLLC.Interfaces;
 using MentoringLLC.Pages;
+using MentoringLLC.Pages.Admin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,19 +26,24 @@ namespace MentoringLLC
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static MainWindow instance; 
-        
+        public static MainWindow instance;
         public MainWindow()
         {
+            
             InitializeComponent();
+
             instance = this;
             mainWindowFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
+
             NavigateToLoginPage();
+            instance = this;
         }
 
-        private void NavigateToLoginPage()
+        public void NavigateToLoginPage()
         {
+
             mainWindowFrame.Content = new Profil();
+
             sideBarFrame.Content = new Sidebar();
         }
     }

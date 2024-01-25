@@ -19,12 +19,20 @@
   </ItemGroup>
 
   <ItemGroup>
+
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SuperSimpleTcp" Version="3.0.14" />
+  </ItemGroup>
+
+  
+
     <Content Include="MentoringIco.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\HTL-Logo.png" />
     <Resource Include="Images\Sidebar_images\add.png">
+
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Sidebar_images\calender.png">
