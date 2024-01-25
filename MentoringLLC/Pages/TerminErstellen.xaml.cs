@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MentoringLLC.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -83,6 +84,14 @@ namespace MentoringLLC.Pages
             {
                 HBeschreibung.Visibility = Visibility.Hidden;
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime date = new DateTime();
+            
+            Termin termin = new Termin(TitelTB.Text,CBFach.Text,TeilnehmerTB.Text,date,OrtTB.Text,BeschreibungTB.Text);
+
         }
     }
 }

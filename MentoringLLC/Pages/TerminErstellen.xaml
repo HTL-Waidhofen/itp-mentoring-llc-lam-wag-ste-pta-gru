@@ -30,7 +30,7 @@
 
             <Label x:Name="HBeschreibung" Width="200" Height="25" Canvas.Left="200" Canvas.Top="250" Content="Beschreibung des Inhaltes" Foreground="Gray"  ></Label>
             <TextBox x:Name="BeschreibungTB" VerticalAlignment="Top" Width="380"  Height="50" Canvas.Left="200" Canvas.Top="250" TextChanged="BeschreibungTB_TextChanged" Background="{x:Null}"/>
-            <Button Content="Termin erstellen" Width="100" Canvas.Left="350" Canvas.Top="320"/>
+            <Button Content="Termin erstellen" Width="100" Canvas.Left="350" Canvas.Top="320" Click="Button_Click"/>
         </Canvas>
     </Viewbox>
 </Page>
