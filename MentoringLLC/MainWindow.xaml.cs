@@ -15,10 +15,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MentoringLLC.Pages;
+using MentoringLLC.Pages.Einstellungspages;
 
 namespace MentoringLLC
 {
     /// <summary>
+    /// Interaction logic for MainWindow.xaml
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
@@ -28,13 +31,19 @@ namespace MentoringLLC
         {
             
             InitializeComponent();
+
+            instance = this;
+            mainWindowFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
+
             NavigateToLoginPage();
             instance = this;
         }
 
         public void NavigateToLoginPage()
         {
-            mainWindowFrame.Content = new ban_User();
+
+            mainWindowFrame.Content = new Profil();
+
             sideBarFrame.Content = new Sidebar();
         }
     }

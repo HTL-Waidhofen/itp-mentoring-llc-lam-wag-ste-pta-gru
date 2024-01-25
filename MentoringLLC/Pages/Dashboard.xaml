@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Dashboard">
     <Viewbox>
-        <Canvas MinWidth="800" MinHeight="450">
+        <Canvas Width="800" Height="450">
             <!-- 1: Name -->
             <TextBox Text="" x:Name="Mname" Height="100" Width="300" Canvas.Left="250" Canvas.Top="20" FontSize="70" TextAlignment="Center" IsReadOnly="True"   ></TextBox>
 

@@ -13,6 +13,7 @@
                 
             </Border>
             <StackPanel>
+
                 <Image Height="40" Source="/Pages/Sidebar_images/calender.png" MouseDown="Image_MouseDown"/>
                 <Image Height="40" Source="/Pages/Sidebar_images/calender.png" MouseDown="Image_MouseDown_1"/>
                 <Image Height="40" Source="/Pages/Sidebar_images/chat.png" MouseDown="Image_MouseDown_2"/>
@@ -20,6 +21,7 @@
                 <Image Height="40" Source="/Pages/Sidebar_images/question.png" MouseDown="Image_MouseDown_6"/>
                 <Image Height="40" Source="/Pages/Sidebar_images/settings.png" MouseDown="Image_MouseDown_4"/>
                 <Image Height="40" Source="/Pages/Sidebar_images/exit.png" MouseDown="Image_MouseDown_5"/>
+
             </StackPanel>
         </Canvas>
     </Viewbox>

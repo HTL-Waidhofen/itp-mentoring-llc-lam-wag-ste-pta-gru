@@ -9,8 +9,7 @@
       Title="FAQ">
 
     <Viewbox>
-
-        <Canvas MinWidth="800" MinHeight="450">
+        <Canvas Width="800" Height="450">
             <TextBox x:Name="Headline" Height="100" Canvas.Left="200" Canvas.Top="10" FontSize="70" TextAlignment="Center" IsReadOnly="True" Width="400" >FAQ</TextBox>
 
             <ListBox  x:Name="listbQuestions" Width="600" Height="280" Canvas.Left="100" Canvas.Top="150" MouseDown="OpenQuestions"  />

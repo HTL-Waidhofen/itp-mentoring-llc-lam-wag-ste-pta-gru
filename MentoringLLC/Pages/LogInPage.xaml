@@ -1,23 +1,24 @@
-﻿<Page x:Class="MentoringLLC.Pages.LogInPage"
+<Page x:Class="MentoringLLC.Pages.LogInPage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MentoringLLC.Pages"
         mc:Ignorable="d"
-        Title="LogInPage" Height="450" Width="800">
-    <StackPanel>
-        <Grid>
-            <MediaElement x:Name="myMediaElement" Source="Resources/WPFMentor.mp4" IsMuted="True">
+        Title="LogInPage" Height="450" Width="850">
+    <Viewbox>
+        <Canvas Height="450" Width="850">
+
+            <MediaElement x:Name="myMediaElement" Source="Resources/WPFMentor.mp4" IsMuted="True" Width="850">
                 <MediaElement.Triggers>
                     <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                         <BeginStoryboard>
                             <Storyboard>
 
                                 <!-- The MediaTimeline has a RepeatBehavior="Forever" which makes the media play
-             over and over indefinitely.-->
-                                <MediaTimeline Source="WPFMentor.mp4" Storyboard.TargetName="myMediaElement"  
-         RepeatBehavior="Forever" />
+          over and over indefinitely.-->
+                                <MediaTimeline Name="Background" 
+      RepeatBehavior="Forever" />
 
                             </Storyboard>
                         </BeginStoryboard>
@@ -25,20 +26,16 @@
                 </MediaElement.Triggers>
 
             </MediaElement>
-            <StackPanel>
-                <Label Height="85"></Label>
-                <TextBox Height="25" Width="112"/>
-                <Label Height="85"></Label>
-                <TextBox Height="25" Width="112"/>
-                <Label Height="85"></Label>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Height="25" Width="120" FontSize="15">Sign-Up</Button>
-                    <Label Width="50"></Label>
-                    <Button Height="25" Width="120" FontSize="15">Log-In</Button>
+            <Label Height="85"></Label>
+            <TextBox Name="UsernameBox" Height="20" Width="180" Text="Username/Email" GotFocus="Username" Canvas.Left="335" Canvas.Top="83" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Height="85"></Label>
 
-                </StackPanel>
-            </StackPanel>
-        </Grid>
-
-    </StackPanel>
+            <TextBox x:Name="PasswordTextBox" Text="Password" GotFocus="Password" Height="20" Width="112" Canvas.Left="369" Canvas.Top="215" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <PasswordBox x:Name="HiddenPasswordBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="369" Canvas.Top="215"/>
+            <Label Height="85" Canvas.Left="394" Canvas.Top="284" HorizontalAlignment="Left" VerticalAlignment="Center" Width="62"></Label>
+            <Button Height="25" Width="120" FontSize="15" Click="SignUpButton" Canvas.Left="461" Canvas.Top="314" HorizontalAlignment="Left" VerticalAlignment="Center">Sign-Up</Button>
+            <Label Width="50"></Label>
+            <Button Click="Username" Height="25" Width="120" FontSize="15" Canvas.Left="269" Canvas.Top="314" HorizontalAlignment="Left" VerticalAlignment="Center">Log-In</Button>
+        </Canvas>
+    </Viewbox>
 </Page>

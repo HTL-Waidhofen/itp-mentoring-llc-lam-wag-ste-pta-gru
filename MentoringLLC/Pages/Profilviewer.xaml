@@ -9,7 +9,7 @@
       Title="Profilviewer">
 
     <Viewbox>
-        <Canvas MinWidth="800" MinHeight="450">
+        <Canvas Width="800" Height="450">
             <!-- 1: Profilbild, Name + Buttons -->
             <Image Height="100" Width="100" Canvas.Left="20" Canvas.Top="10"  ></Image>
 
