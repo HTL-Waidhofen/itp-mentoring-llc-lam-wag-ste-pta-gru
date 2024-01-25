@@ -45,7 +45,7 @@
                 <ComboBox Grid.Column="2" Grid.Row="1" Height="20" Width="90" Margin="0,0,20,0">
                     <ComboBoxItem>Klein</ComboBoxItem>
                     <ComboBoxItem>Mittel</ComboBoxItem>
-                    <ComboBoxItem>Große</ComboBoxItem>
+                    <ComboBoxItem>Groß</ComboBoxItem>
                 </ComboBox>
                 <Label Grid.Column="2" Grid.Row="1"  Margin="50,150,240,90" Height="30" Width="50">Beispiel</Label>
             </Grid>

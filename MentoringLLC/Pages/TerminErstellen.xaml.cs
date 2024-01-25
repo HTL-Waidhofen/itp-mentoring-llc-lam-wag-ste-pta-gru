@@ -90,7 +90,7 @@ namespace MentoringLLC.Pages
         {
             DateTime date = new DateTime();
             
-            Termin termin = new Termin(TitelTB.Text,CBFach.Text,TeilnehmerTB.Text,date,OrtTB.Text,BeschreibungTB.Text);
+            Termin termin = new Termin(TitelTB.Text,CBFach.Text,int.Parse(TeilnehmerTB.Text),date,OrtTB.Text,BeschreibungTB.Text);
 
         }
     }
