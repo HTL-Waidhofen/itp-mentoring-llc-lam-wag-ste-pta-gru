@@ -1,0 +1,46 @@
+﻿<Page x:Class="MentoringLLC.Pages.Einstellungspages.Sicherheit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MentoringLLC.Pages.Einstellungspages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Sicherheit">
+
+    <Viewbox>
+        <Canvas Height="450" Width="800">
+            <Grid Height="450" Width="800">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="1.5*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="1.5*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="2" FontSize="50" HorizontalAlignment="Center">Einstellungen</Label>
+                <ListBox Grid.Row="1" Grid.Column="1"  FontSize="28" FontFamily="Arial">
+                    <ListBoxItem Margin="0,10" MouseDoubleClick="ListBoxItem_Selected" >Profil</ListBoxItem>
+                    <ListBoxItem Margin="0,10" MouseDoubleClick="ListBoxItem_Selected_1" >Erscheinung</ListBoxItem>
+                    <ListBoxItem Margin="0,10" MouseDoubleClick="ListBoxItem_Selected_2" >Sicherheit</ListBoxItem>
+                    <ListBoxItem Margin="0,10" MouseDoubleClick="ListBoxItem_Selected_3" >Mentor</ListBoxItem>
+                </ListBox>
+                <Label  Grid.Column="2" Grid.Row="1" Margin="40,20" HorizontalAlignment="Left">Passwort ändern</Label>
+                <Button  Grid.Column="2" Grid.Row="1" Margin="208,25,34,0" VerticalAlignment="Top" Height="20" Width="100">Ändern</Button>
+
+                <Label  Grid.Column="2" Grid.Row="1" Margin="40,60" HorizontalAlignment="Left">Nicht stören</Label>
+                <Label  Grid.Column="2" Grid.Row="1" Margin="40,72" HorizontalAlignment="Left" FontSize="9">Sie erhalten keine Benachrichtigungen</Label>
+                <CheckBox  Grid.Column="2" Grid.Row="1" Margin="208,67,0,188" HorizontalAlignment="Left"></CheckBox>
+                <Label  Grid.Column="2" Grid.Row="1" Margin="40,90" HorizontalAlignment="Left">Gefähliche Inhalte blockieren</Label>
+                <CheckBox  Grid.Column="2" Grid.Row="1" Margin="208,97,0,157" HorizontalAlignment="Left" IsChecked="True"></CheckBox>
+                <!--Freier Raum für Sicherheit-Ideen-->
+            </Grid>
+        </Canvas>
+    </Viewbox>
+</Page>
