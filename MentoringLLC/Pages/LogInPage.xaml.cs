@@ -41,7 +41,7 @@ namespace MentoringLLC.Pages
 
         private void SignUpButton(object sender, RoutedEventArgs e)
         {
-            MainWindow.instance.mainWindowFrame.Content = new Pages.SignUpPage(UsedUsernameBox, UsedPasswordBox, UsernameBox.Text, HiddenPasswordBox.Password);
+            MainWindow.instance.FullScreenFrame.Content = new Pages.SignUpPage(UsedUsernameBox, UsedPasswordBox, UsernameBox.Text, HiddenPasswordBox.Password);
         } 
         private void LogInButton(object sender, RoutedEventArgs e)
         {
