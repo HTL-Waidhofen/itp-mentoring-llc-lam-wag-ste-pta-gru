@@ -10,13 +10,11 @@
     <Viewbox>
         <Canvas Width="800" Height="450">
             <!-- 1: Name -->
-            <TextBox Text="" x:Name="Mname" Height="100" Width="300" Canvas.Left="250" Canvas.Top="20" FontSize="70" TextAlignment="Center" IsReadOnly="True"   ></TextBox>
-
-
+            <TextBox Text="" x:Name="Mname" Height="100" Width="300" FontSize="70" TextAlignment="Center" IsReadOnly="True" Canvas.Left="250" Canvas.Top="28"></TextBox>
             <!-- 2: Fächer, Mentoren -->
-            <ListBox x:Name="Faecher" Height="250" Width="300"  Canvas.Left="20" Canvas.Top="150"></ListBox>
-            <ListBox x:Name="Angebote" Height="250" Width="300" Canvas.Left="480" Canvas.Top="150"  ></ListBox>
+            <ListBox x:Name="Faecher" Height="250" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="152" Canvas.Left="10"></ListBox>
+            <ListBox x:Name="Angebote" Height="250" Width="300" Canvas.Left="490" Canvas.Top="152"></ListBox>
         </Canvas>
     </Viewbox>
-    
+
 </Page>

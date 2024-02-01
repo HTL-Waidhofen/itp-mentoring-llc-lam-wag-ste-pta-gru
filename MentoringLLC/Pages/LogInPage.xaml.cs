@@ -37,7 +37,7 @@ namespace MentoringLLC.Pages
 
         private void SignUpButton(object sender, RoutedEventArgs e)
         {
-            MainWindow.instance.Content = new Pages.SignUpPage(UsedUsernameBox, UsedPasswordBox, UsernameBox.Text, HiddenPasswordBox.Password);
+            MainWindow.instance.mainWindowFrame.Content = new Pages.SignUpPage(UsedUsernameBox, UsedPasswordBox, UsernameBox.Text, HiddenPasswordBox.Password);
         } 
         private void LogInButton(object sender, RoutedEventArgs e)
         {
@@ -67,10 +67,12 @@ namespace MentoringLLC.Pages
 
             if (user.Password == HiddenPasswordBox.Password)
             {
+
                 if (user.IsAdmin == 1)
-                    MainWindow.instance.Content = new Pages.Admin.ban_User();
+                    MainWindow.instance.mainWindowFrame.Content = new Pages.Admin.ban_User();
                 else
-                    MainWindow.instance.Content = new Pages.Dashboard(user);
+                   MainWindow.instance.mainWindowFrame.Content = new Pages.Dashboard(user);
+
 
             }
         }

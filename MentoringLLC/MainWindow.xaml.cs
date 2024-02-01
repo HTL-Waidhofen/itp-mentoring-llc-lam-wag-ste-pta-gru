@@ -42,7 +42,7 @@ namespace MentoringLLC
         public void NavigateToLoginPage()
         {
 
-            mainWindowFrame.Content = new Profil();
+            mainWindowFrame.Content = new LogInPage();
 
             sideBarFrame.Content = new Sidebar();
         }
