@@ -1,5 +1,4 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,23 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaktionslogik für Window2.xaml
+    /// Interaction logic for MentoringErstellenWindow.xaml
     /// </summary>
-    public partial class Window2 : Window
+    public partial class MentoringErstellenWindow : Window
     {
-        public Window2()
+        public MentoringErstellenWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //Datenbankverbindung
+
         }
     }
 }
