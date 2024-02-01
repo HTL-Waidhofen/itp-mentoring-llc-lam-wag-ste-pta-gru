@@ -29,19 +29,19 @@
             </MediaElement>
 
             <Label Height="85"></Label>
-            <TextBox Name="UsernameBox" Height="20" Width="112" Text="Username" GotFocus="Username" Canvas.Left="369" Canvas.Top="42"/>
+            <TextBox Name="UsernameBox" Height="20" Width="112" Text="Username" GotFocus="Username" Canvas.Left="270" Canvas.Top="105"/>
             <Label Height="45"></Label>
-            <TextBox Name="EmailBox" Height="20" Width="180" Text="E-Mail" GotFocus="EMail" Canvas.Left="335" Canvas.Top="105" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox Name="EmailBox" Height="20" Width="180" Text="E-Mail" GotFocus="EMail" Canvas.Left="400" Canvas.Top="105" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Label Height="45"></Label>
 
 
 
-            <TextBox x:Name="PasswordTextBox" Text="Password" GotFocus="Password" Height="20" Width="112" Canvas.Left="369" Canvas.Top="178"/>
-            <PasswordBox x:Name="HiddenPasswordBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="369" Canvas.Top="178"/>
+            <TextBox x:Name="PasswordTextBox" Text="Password" GotFocus="Password" Height="20" Width="310" Canvas.Left="270" Canvas.Top="178"/>
+            <PasswordBox x:Name="HiddenPasswordBox" Visibility="Collapsed" Height="20" Width="310" Canvas.Left="270" Canvas.Top="178"/>
 
 
-            <TextBox x:Name="PasswordConfirmTextBox" Text="Confirm Password" GotFocus="PasswordConfirm" Height="20" Width="112" Canvas.Left="369" Canvas.Top="254"/>
-            <PasswordBox x:Name="HiddenPasswordConfirmBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="369" Canvas.Top="254"/>
+            <TextBox x:Name="PasswordConfirmTextBox" Text="Confirm Password" GotFocus="PasswordConfirm" Height="20" Width="310" Canvas.Left="270" Canvas.Top="254"/>
+            <PasswordBox x:Name="HiddenPasswordConfirmBox" Visibility="Collapsed" Height="20" Width="310" Canvas.Left="270" Canvas.Top="254"/>
             <Label Height="45"></Label>
 
 

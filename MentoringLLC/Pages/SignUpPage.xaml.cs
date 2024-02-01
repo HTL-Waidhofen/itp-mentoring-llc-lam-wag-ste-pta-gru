@@ -71,21 +71,22 @@ namespace MentoringLLC.Pages
         }
         private void SignUpButton(object sender, RoutedEventArgs e)
         {
-
+            SignUp();
         }
 
         private void Username(object sender, RoutedEventArgs e)
         {
             if (!LI_UsedUsernameBox)
-            UsernameBox.Text = string.Empty;
+                UsernameBox.Text = string.Empty;
         }
         private void Password(object sender, RoutedEventArgs e)
         {
 
-            if (!LI_UsedPasswordBox) { 
-            HiddenPasswordBox.Visibility = Visibility.Visible;
-            PasswordTextBox.Visibility = Visibility.Hidden;
-            HiddenPasswordBox.Focus();
+            if (!LI_UsedPasswordBox)
+            {
+                HiddenPasswordBox.Visibility = Visibility.Visible;
+                PasswordTextBox.Visibility = Visibility.Hidden;
+                HiddenPasswordBox.Focus();
             }
         }
         private void PasswordConfirm(object sender, RoutedEventArgs e)
@@ -97,23 +98,27 @@ namespace MentoringLLC.Pages
         private void EMail(object sender, RoutedEventArgs e)
         {
             if (!(LI_UsernameEmailContent.Contains("@") && LI_UsedUsernameBox))
-            EmailBox.Text = string.Empty;
+                EmailBox.Text = string.Empty;
         }
         private void SignUp()
         {
-           
             User user = new User();
-            user.Username = UsernameBox.Text;
-            
-            user.Email = EmailBox.Text;
 
-            if (user.Password == HiddenPasswordBox.Password)
+            if (UsernameBox.Text != string.Empty && PasswordTextBox.Text == PasswordConfirmTextBox.Text && EmailBox.Text.Contains("@"))
             {
-                MainWindow.instance.FullScreenFrame.Content = null;
-                if (user.IsAdmin == 1)
-                    MainWindow.instance.mainWindowFrame.Content = new Pages.Admin.ban_User();
-                else
-                    MainWindow.instance.mainWindowFrame.Content = new Pages.Dashboard(user);
+                user.Username = UsernameBox.Text;
+                user.Password = PasswordTextBox.Text;
+                user.Email = EmailBox.Text;
+                SqliteDataAccess.AddUser(user);
+
+                if (user.Password == HiddenPasswordBox.Password)
+                {
+                    MainWindow.instance.FullScreenFrame.Content = null;
+                    if (user.IsAdmin == 1)
+                        MainWindow.instance.mainWindowFrame.Content = new Pages.Admin.ban_User();
+                    else
+                        MainWindow.instance.mainWindowFrame.Content = new Pages.Dashboard(user);
+                }
             }
         }
     }
