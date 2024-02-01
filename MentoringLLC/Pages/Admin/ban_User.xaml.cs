@@ -30,7 +30,7 @@ namespace MentoringLLC.Pages.Admin
         public ban_User()
         {
             InitializeComponent();
-            List<User> users = User.getUserList();
+            users = User.getUserList();
             fill_lBox(users);
 
         }
