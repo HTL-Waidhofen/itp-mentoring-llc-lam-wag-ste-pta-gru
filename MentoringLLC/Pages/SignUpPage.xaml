@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MentoringLLC.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="850"
-      Title="SignUpPage">
+      d:DesignHeight="450"
+      Title="SignUpPage" Width="799">
 
     <Viewbox>
-        <Canvas Height="450" Width="850">
-            <MediaElement x:Name="myMediaElement" Source="Resources/WPFMentor.mp4" IsMuted="True" Height="450" Width="850">
+        <Canvas Height="450" Width="799">
+            <MediaElement x:Name="myMediaElement" Source="Resources/WPFMentor.mp4" IsMuted="True" Height="515" Width="904" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="-29" Canvas.Left="-27">
                 <MediaElement.Triggers>
                     <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                         <BeginStoryboard>
@@ -39,7 +39,6 @@
             <TextBox x:Name="PasswordTextBox" Text="Password" GotFocus="Password" Height="20" Width="112" Canvas.Left="369" Canvas.Top="178"/>
             <PasswordBox x:Name="HiddenPasswordBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="369" Canvas.Top="178"/>
 
-            <Label Height="45"></Label>
 
             <TextBox x:Name="PasswordConfirmTextBox" Text="Confirm Password" GotFocus="PasswordConfirm" Height="20" Width="112" Canvas.Left="369" Canvas.Top="254"/>
             <PasswordBox x:Name="HiddenPasswordConfirmBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="369" Canvas.Top="254"/>

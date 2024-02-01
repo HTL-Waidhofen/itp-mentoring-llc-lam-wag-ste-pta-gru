@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MentoringLLC.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -67,10 +68,6 @@ namespace MentoringLLC.Pages
             {
                 UsernameBox.Text = LI_UsernameEmailContent;
             }
-            
-           
-
-
         }
         private void SignUpButton(object sender, RoutedEventArgs e)
         {
@@ -102,6 +99,22 @@ namespace MentoringLLC.Pages
             if (!(LI_UsernameEmailContent.Contains("@") && LI_UsedUsernameBox))
             EmailBox.Text = string.Empty;
         }
+        private void SignUp()
+        {
+           
+            User user = new User();
+            user.Username = UsernameBox.Text;
+            
+            user.Email = EmailBox.Text;
 
+            if (user.Password == HiddenPasswordBox.Password)
+            {
+                MainWindow.instance.FullScreenFrame.Content = null;
+                if (user.IsAdmin == 1)
+                    MainWindow.instance.mainWindowFrame.Content = new Pages.Admin.ban_User();
+                else
+                    MainWindow.instance.mainWindowFrame.Content = new Pages.Dashboard(user);
+            }
+        }
     }
 }

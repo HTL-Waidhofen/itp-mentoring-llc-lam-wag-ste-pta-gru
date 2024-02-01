@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 using MentoringLLC.Classes;
+using MentoringLLC.Pages.Admin;
 
 namespace MentoringLLC.Pages
 {
@@ -23,8 +24,7 @@ namespace MentoringLLC.Pages
     {
         public bool UsedUsernameBox { get; set; }
         public bool UsedPasswordBox { get; set; }
-        public double temp { get; set; }
-        
+
         
         public LogInPage()
         {
@@ -33,9 +33,6 @@ namespace MentoringLLC.Pages
             string relativePath = System.IO.Path.Combine("Pages", "Resources", "WPFMentor.mp4");
             string dynamicPath = System.IO.Path.Combine(baseDirectory, relativePath);
             Background.Source = new Uri(dynamicPath);
-           /* temp = MainWindow.instance.sideBarFrame.Width;
-            MainWindow.instance.sideBarFrame.Width = 0;
-            MainWindow.instance.sideBarFrame = null; */
            
         }
 
@@ -71,9 +68,11 @@ namespace MentoringLLC.Pages
 
             if (user.Password == HiddenPasswordBox.Password)
             {
-                MainWindow.instance.FullScreenFrame.Content = null;
-                MainWindow.instance.mainWindowFrame.Content = new Pages.Dashboard(user);
-                
+
+                if (user.IsAdmin == 1)
+                    MainWindow.instance.mainWindowFrame.Content = new Pages.Admin.ban_User();
+                else
+                   MainWindow.instance.mainWindowFrame.Content = new Pages.Dashboard(user);
             }
         }
     }
