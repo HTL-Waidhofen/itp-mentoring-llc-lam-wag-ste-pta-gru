@@ -72,8 +72,6 @@ namespace MentoringLLC.Pages
                     MainWindow.instance.mainWindowFrame.Content = new Pages.Admin.ban_User();
                 else
                    MainWindow.instance.mainWindowFrame.Content = new Pages.Dashboard(user);
-
-
             }
         }
     }
