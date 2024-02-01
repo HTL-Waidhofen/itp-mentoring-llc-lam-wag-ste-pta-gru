@@ -48,5 +48,10 @@ namespace MentoringLLC.Classes
             }
             return users;
         }
+        public override string ToString()
+        {
+            return Username;
+        }
     }
+
 }
