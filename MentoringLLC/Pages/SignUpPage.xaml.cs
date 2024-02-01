@@ -67,10 +67,6 @@ namespace MentoringLLC.Pages
             {
                 UsernameBox.Text = LI_UsernameEmailContent;
             }
-            
-           
-
-
         }
         private void SignUpButton(object sender, RoutedEventArgs e)
         {

@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace MentoringLLC.Classes
 {
-    internal class Termin
+    public class Termin
     {
-        string Titel { get; set; }
-        string Fach { get; set; }
-        int Teilnehmermoeglich { get; set; }
-        int Teilnehmeranzahl { get; set; }
-        DateTime Datum { get; set; }
-        string Ort { get; set; }
-        string Beschreibung { get; set; }
+        public string Titel { get; set; }
+        public int id { get; set; }
+        public string Fach { get; set; }
+        public int Teilnehmermoeglich { get; set; }
+        public int Teilnehmeranzahl { get; set; }
+        public DateTime Datum { get; set; }
+        public string Ort { get; set; }
+        public string Beschreibung { get; set; }
 
         public Termin() { }
 
@@ -26,7 +27,6 @@ namespace MentoringLLC.Classes
             Datum = datum;
             Ort = ort;
             Beschreibung = beschreibung;
-           
         }
 
     }
