@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
+using MentoringLLC.Classes;
 
 namespace MentoringLLC.Pages
 {
@@ -45,6 +46,7 @@ namespace MentoringLLC.Pages
         {
             UsernameBox.Text = string.Empty;
             UsedUsernameBox = true;
+            LogIn();
         }
         private void Password(object sender, RoutedEventArgs e)
         {
@@ -52,6 +54,13 @@ namespace MentoringLLC.Pages
             PasswordTextBox.Visibility = Visibility.Hidden;
             HiddenPasswordBox.Focus();
             UsedPasswordBox = true;
+        }
+        private void LogIn()
+        {
+            // Implement check here
+
+            User user = new User();
+            MainWindow.instance.Content = new Pages.Dashboard(user);
         }
     }
 }

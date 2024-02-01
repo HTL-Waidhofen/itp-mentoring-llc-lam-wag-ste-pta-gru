@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MentoringLLC.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,10 @@ namespace MentoringLLC.Pages
     /// </summary>
     public partial class Dashboard : Page
     {
-        public Dashboard()
+        public Dashboard(User LoggedInUser)
         {
             InitializeComponent();
+            
         }
     }
 }
