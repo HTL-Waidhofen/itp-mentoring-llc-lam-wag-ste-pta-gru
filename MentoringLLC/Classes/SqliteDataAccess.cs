@@ -13,6 +13,38 @@ using MentoringLLC.Classes;
 
 public class SqliteDataAccess
 {
+    public static Termin GetTerminbyId(int id)
+    {
+        using (var con = new SQLiteConnection(loadConnectionString()))
+        {
+            con.Open();
+            Termin ter = new Termin();
+            using (var cmd = new SQLiteCommand(con))
+            {
+                Console.WriteLine("connected");
+                cmd.CommandText = "SELECT * FROM LLC_TERMINE WHERE id = @id";
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+                using (SQLiteDataReader rdr = cmd.ExecuteReader())
+                {
+                    if (rdr.Read())
+                    {
+                        ter.id = rdr.GetInt32(0);
+                        ter.Titel = rdr.GetString(1);
+                        ter.Beschreibung = rdr.GetString(2);
+                        ter.Fach = rdr.GetString(3);
+                        ter.Teilnehmermoeglich = rdr.GetInt32(4);
+                        ter.Teilnehmeranzahl = rdr.GetInt32(5);
+                        ter.Datum = DateTime.Parse(rdr.GetString(6));
+                        ter.Ort = rdr.GetString(7);
+                    }
+
+                }
+            }
+            return ter;
+        }
+    }
     public static User GetUserbyEmail(string email)
     {
         using (var con = new SQLiteConnection(loadConnectionString()))
@@ -161,6 +193,29 @@ public class SqliteDataAccess
         }
     }
 
+    public static void AddTermin(Termin termin)
+    {
+        using (var con = new SQLiteConnection(loadConnectionString()))
+        {
+            con.Open();
+
+            using (var cmd = new SQLiteCommand(con))
+            {
+                cmd.CommandText = "INSERT INTO LLC_TERMINE(Titel,Beschreibung,Fach,Teilnehmermoeglich,Teilnehmeranzahl,Datum,Ort) VALUES(@title,@desc,@subject,@maxPep,@curPep,@date,@where)";
+                cmd.Parameters.AddWithValue("@title", termin.Titel);
+                cmd.Parameters.AddWithValue("@desc", termin.Beschreibung);
+                cmd.Parameters.AddWithValue("@subject", termin.Fach);
+                cmd.Parameters.AddWithValue("@maxPep", termin.Teilnehmermoeglich);
+                cmd.Parameters.AddWithValue("@curPep", termin.Teilnehmeranzahl);
+                cmd.Parameters.AddWithValue("@date", termin.Datum);
+                cmd.Parameters.AddWithValue("@where", termin.Ort);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+
+            }
+        }
+    }
+
     public static void UpdateUser(User user)
     {
         using (var con = new SQLiteConnection(loadConnectionString()))
@@ -202,8 +257,23 @@ public class SqliteDataAccess
             }
         }
     }
+    public static void RemoveTermin(Termin termin)
+    {
+        using (var con = new SQLiteConnection(loadConnectionString()))
+        {
+            con.Open();
 
-    private static string loadConnectionString()
+            using (var cmd = new SQLiteCommand(con))
+            {
+                cmd.CommandText = "DELETE FROM LLC_TERMINE WHERE id=@id;";
+                cmd.Parameters.AddWithValue("@id", termin.id);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+        }
+    }
+
+        private static string loadConnectionString()
     {
         return "DataSource=./data.db;Version=3;";
     }

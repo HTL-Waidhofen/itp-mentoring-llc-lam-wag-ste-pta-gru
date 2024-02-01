@@ -30,8 +30,8 @@
             <TextBox Name="UsernameBox" Height="20" Width="180" Text="Username/Email" GotFocus="Username" Canvas.Left="335" Canvas.Top="83" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Label Height="85"></Label>
 
-            <TextBox x:Name="PasswordTextBox" Text="Password" GotFocus="Password" Height="20" Width="112" Canvas.Left="369" Canvas.Top="215" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <PasswordBox x:Name="HiddenPasswordBox" Visibility="Collapsed" Height="20" Width="112" Canvas.Left="369" Canvas.Top="215"/>
+            <TextBox x:Name="PasswordTextBox" Text="Password" GotFocus="Password" Height="20" Width="180" Canvas.Left="335" Canvas.Top="135" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <PasswordBox x:Name="HiddenPasswordBox" Visibility="Collapsed" Height="20" Width="180" Canvas.Left="335" Canvas.Top="135"/>
             <Label Height="85" Canvas.Left="394" Canvas.Top="284" HorizontalAlignment="Left" VerticalAlignment="Center" Width="62"></Label>
             <Button Height="25" Width="120" FontSize="15" Click="SignUpButton" Canvas.Left="461" Canvas.Top="314" HorizontalAlignment="Left" VerticalAlignment="Center">Sign-Up</Button>
             <Label Width="50"></Label>
