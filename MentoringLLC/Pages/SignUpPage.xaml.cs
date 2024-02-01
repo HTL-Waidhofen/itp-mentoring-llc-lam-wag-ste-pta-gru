@@ -71,7 +71,7 @@ namespace MentoringLLC.Pages
         }
         private void SignUpButton(object sender, RoutedEventArgs e)
         {
-
+            SignUp();
         }
 
         private void Username(object sender, RoutedEventArgs e)
@@ -100,16 +100,17 @@ namespace MentoringLLC.Pages
             EmailBox.Text = string.Empty;
         }
         private void SignUp()
-        {
-           
+        {           
             User user = new User();
-            user.Username = UsernameBox.Text;
             
-            user.Email = EmailBox.Text;
-
-            if (user.Password == HiddenPasswordBox.Password)
+            if(UsernameBox.Text != string.Empty && PasswordTextBox.Text == PasswordConfirmTextBox.Text&& EmailBox.Text.Contains("@"))
             {
+                user.Username = UsernameBox.Text;
+                user.Password = PasswordTextBox.Text;
+                user.Email = EmailBox.Text;
+                SqliteDataAccess.AddUser(user);
 
+             
                 if (user.IsAdmin == 1)
                     MainWindow.instance.mainWindowFrame.Content = new Pages.Admin.ban_User();
                 else
