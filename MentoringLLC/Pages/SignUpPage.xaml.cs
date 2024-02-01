@@ -77,15 +77,16 @@ namespace MentoringLLC.Pages
         private void Username(object sender, RoutedEventArgs e)
         {
             if (!LI_UsedUsernameBox)
-            UsernameBox.Text = string.Empty;
+                UsernameBox.Text = string.Empty;
         }
         private void Password(object sender, RoutedEventArgs e)
         {
 
-            if (!LI_UsedPasswordBox) { 
-            HiddenPasswordBox.Visibility = Visibility.Visible;
-            PasswordTextBox.Visibility = Visibility.Hidden;
-            HiddenPasswordBox.Focus();
+            if (!LI_UsedPasswordBox)
+            {
+                HiddenPasswordBox.Visibility = Visibility.Visible;
+                PasswordTextBox.Visibility = Visibility.Hidden;
+                HiddenPasswordBox.Focus();
             }
         }
         private void PasswordConfirm(object sender, RoutedEventArgs e)
@@ -97,15 +98,16 @@ namespace MentoringLLC.Pages
         private void EMail(object sender, RoutedEventArgs e)
         {
             if (!(LI_UsernameEmailContent.Contains("@") && LI_UsedUsernameBox))
-            EmailBox.Text = string.Empty;
+                EmailBox.Text = string.Empty;
         }
         private void SignUp()
-        {           
+        {
             User user = new User();
 
-           
 
             if (UsernameBox.Text != string.Empty && HiddenPasswordBox.Password == HiddenPasswordConfirmBox.Password && EmailBox.Text.Contains('@'))
+
+           
             {
                 user.Username = UsernameBox.Text;
                 user.Password = PasswordTextBox.Text;
@@ -117,6 +119,7 @@ namespace MentoringLLC.Pages
                     MainWindow.instance.mainWindowFrame.Content = new Pages.Admin.ban_User();
                 else
                     MainWindow.instance.mainWindowFrame.Content = new Pages.Dashboard(user);
+           
             }
             else
                 MessageBox.Show("Inkorrekt Eingabe");

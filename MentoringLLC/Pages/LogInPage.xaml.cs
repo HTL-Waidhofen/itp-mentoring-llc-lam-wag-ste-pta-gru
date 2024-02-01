@@ -24,7 +24,7 @@ namespace MentoringLLC.Pages
     {
         public bool UsedUsernameBox { get; set; }
         public bool UsedPasswordBox { get; set; }
-        
+
         
         public LogInPage()
         {
@@ -33,11 +33,12 @@ namespace MentoringLLC.Pages
             string relativePath = System.IO.Path.Combine("Pages", "Resources", "WPFMentor.mp4");
             string dynamicPath = System.IO.Path.Combine(baseDirectory, relativePath);
             Background.Source = new Uri(dynamicPath);
+           
         }
 
         private void SignUpButton(object sender, RoutedEventArgs e)
         {
-            MainWindow.instance.mainWindowFrame.Content = new Pages.SignUpPage(UsedUsernameBox, UsedPasswordBox, UsernameBox.Text, HiddenPasswordBox.Password);
+            MainWindow.instance.FullScreenFrame.Content = new Pages.SignUpPage(UsedUsernameBox, UsedPasswordBox, UsernameBox.Text, HiddenPasswordBox.Password);
         } 
         private void LogInButton(object sender, RoutedEventArgs e)
         {
