@@ -36,7 +36,7 @@ namespace MentoringLLC.Pages
 
         private void SignUpButton(object sender, RoutedEventArgs e)
         {
-            MainWindow.instance.Content = new Pages.SignUpPage(UsedUsernameBox, UsedPasswordBox, UsernameBox.Text, HiddenPasswordBox.Password);
+            MainWindow.instance.mainWindowFrame.Content = new Pages.SignUpPage(UsedUsernameBox, UsedPasswordBox, UsernameBox.Text, HiddenPasswordBox.Password);
         } 
         private void LogInButton(object sender, RoutedEventArgs e)
         {
@@ -60,7 +60,7 @@ namespace MentoringLLC.Pages
             // Implement check here
 
             User user = new User();
-            MainWindow.instance.Content = new Pages.Dashboard(user);
+            MainWindow.instance.mainWindowFrame.Content = new Pages.Dashboard(user);
         }
     }
 }
