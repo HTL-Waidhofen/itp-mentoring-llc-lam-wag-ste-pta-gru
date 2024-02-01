@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
 using MentoringLLC.Classes;
 using Newtonsoft.Json;
+using MentoringLLC.Classes;
 
 namespace MentoringLLC.Pages.Admin
 {
@@ -63,7 +64,7 @@ namespace MentoringLLC.Pages.Admin
         {
             int index=UserListbox.SelectedIndex;
             users[index].IsBanned = 1;
-            ServerConnect.client.Send($"updateUser;{JsonConvert.SerializeObject(users[index])}");
+            SqliteDataAccess.UpdateUser(users[index]);
         }
 
         private void BUserEdit_Click(object sender, RoutedEventArgs e)
@@ -75,7 +76,7 @@ namespace MentoringLLC.Pages.Admin
         {
             int index = UserListbox.SelectedIndex;
             users[index].IsBanned = 0;
-            ServerConnect.client.Send($"updateUser;{JsonConvert.SerializeObject(users[index])}");
+            SqliteDataAccess.UpdateUser(users[index]);
         }
     }
 }
