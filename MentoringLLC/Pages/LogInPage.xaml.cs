@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 using MentoringLLC.Classes;
+using MentoringLLC.Pages.Admin;
 
 namespace MentoringLLC.Pages
 {
@@ -66,7 +67,11 @@ namespace MentoringLLC.Pages
 
             if (user.Password == HiddenPasswordBox.Password)
             {
-                MainWindow.instance.Content = new Pages.Dashboard(user);
+                if (user.IsAdmin == 1)
+                    MainWindow.instance.Content = new Pages.Admin.ban_User();
+                else
+                    MainWindow.instance.Content = new Pages.Dashboard(user);
+
             }
         }
     }
