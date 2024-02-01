@@ -40,13 +40,12 @@ namespace MentoringLLC.Pages
         } 
         private void LogInButton(object sender, RoutedEventArgs e)
         {
-
+            LogIn();
         }
         private void Username(object sender, RoutedEventArgs e)
         {
             UsernameBox.Text = string.Empty;
             UsedUsernameBox = true;
-            LogIn();
         }
         private void Password(object sender, RoutedEventArgs e)
         {
@@ -58,9 +57,17 @@ namespace MentoringLLC.Pages
         private void LogIn()
         {
             // Implement check here
-
             User user = new User();
-            MainWindow.instance.Content = new Pages.Dashboard(user);
+            user = SqliteDataAccess.GetUserbyUsername(UsernameBox.Text);
+            if (user.Username == null)
+                user = SqliteDataAccess.GetUserbyEmail(UsernameBox.Text);
+            if (user.Username == null)
+                return;
+
+            if (user.Password == HiddenPasswordBox.Password)
+            {
+                MainWindow.instance.Content = new Pages.Dashboard(user);
+            }
         }
     }
 }
