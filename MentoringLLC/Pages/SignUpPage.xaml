@@ -47,7 +47,7 @@
 
 
 
-            <Button Height="26" Width="120" FontSize="15" Canvas.Left="365" Canvas.Top="352">Sign-Up</Button>
+            <Button Click="SignUpButton" Height="26" Width="120" FontSize="15" Canvas.Left="365" Canvas.Top="352">Sign-Up</Button>
 
 
         </Canvas>

@@ -102,20 +102,24 @@ namespace MentoringLLC.Pages
         private void SignUp()
         {           
             User user = new User();
-            
-            if(UsernameBox.Text != string.Empty && PasswordTextBox.Text == PasswordConfirmTextBox.Text&& EmailBox.Text.Contains("@"))
+
+           
+
+            if (UsernameBox.Text != string.Empty && HiddenPasswordBox.Password == HiddenPasswordConfirmBox.Password && EmailBox.Text.Contains('@'))
             {
                 user.Username = UsernameBox.Text;
                 user.Password = PasswordTextBox.Text;
                 user.Email = EmailBox.Text;
                 SqliteDataAccess.AddUser(user);
 
-             
+
                 if (user.IsAdmin == 1)
                     MainWindow.instance.mainWindowFrame.Content = new Pages.Admin.ban_User();
                 else
                     MainWindow.instance.mainWindowFrame.Content = new Pages.Dashboard(user);
             }
+            else
+                MessageBox.Show("Inkorrekt Eingabe");
         }
     }
 }
