@@ -8,8 +8,9 @@
         SizeToContent="WidthAndHeight"
         Title="HTL Waidhofen Mentoring" Height="450" Width="850"  MinHeight="450" MinWidth="850" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
-        <Frame Name="sideBarFrame" HorizontalAlignment="Left" Width="100"/>
-        <Frame Name="mainWindowFrame" Margin="105,0,0,0"/>
+        <Frame Name="sideBarFrame" HorizontalAlignment="Left" Width="100" NavigationUIVisibility="Hidden"/>
+        <Frame Name="mainWindowFrame" Margin="105,0,0,0" NavigationUIVisibility="Hidden"/>
+        <Frame Name ="FullScreenFrame" NavigationUIVisibility="Hidden"></Frame>
         <Image Margin="10" Width="100" Height="70" Source="/Images/HTL-Logo.png" VerticalAlignment="Top"  HorizontalAlignment="Right"/>
     </Grid>
    
